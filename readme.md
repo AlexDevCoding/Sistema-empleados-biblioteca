@@ -2,7 +2,7 @@
 
 
 
-dsadsad
+
 ## Pasos Para la Instalación
 
 Paso 1:
@@ -14,7 +14,7 @@ Paso 1:
 Paso 2:
 
 ```bash
-  npx tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch
+  npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch
 ```
 
 Paso 3:
