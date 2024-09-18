@@ -290,7 +290,7 @@
 
 <section class="p-4 sm:ml-64 mt-10" id="section">
   <div
-    class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14 w-5/6 bg-[#0b1739]"
+    class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14 w-auto bg-[#0b1739]"
   >
  
  
@@ -299,52 +299,75 @@
   <table id="pagination-table">
     <thead>
         <tr>
+          <th>
+            <span class="flex items-center">
+                Id
+            </span>
+        </th>
+
             <th>
                 <span class="flex items-center">
-                    Model Name
+                    Nombre Completo
                 </span>
             </th>
             <th>
                 <span class="flex items-center">
-                    Developer
+                    Cedula de identidad
                 </span>
             </th>
             <th data-type="date" data-format="Month YYYY">
                 <span class="flex items-center">
-                    Release Date
+                    puesto de trabajo
                 </span>
             </th>
             <th>
                 <span class="flex items-center">
-                    Parameters
+                    Departamento
                 </span>
             </th>
             <th>
                 <span class="flex items-center">
-                    Primary Application
+                    Fecha de ingreso
                 </span>
             </th>
             <th>
               <span class="flex items-center">
-                  Primary Application
+                  Estado
               </span>
           </th>
           <th>
             <span class="flex items-center">
-                Primary Application
+                Telefono
             </span>
         </th>
+
+        <th>
+          <span class="flex items-center">
+             Asistencias
+          </span>
+      </th>
+
+      <th>
+        <span class="flex items-center">
+           Acciones
+        </span>
+    </th>
+
         </tr>
     </thead>
     <tbody>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">GPT-4</td>
+        
             <td>OpenAI</td>
             <td>March 2023</td>
             <td>1 trillion</td>
             <td>Natural Language Processing</td>
             <td>Natural Language Processing</td>
             <td>Natural Language Processing</td>
+            <td>Natural Language Processing</td>
+            <td>Image Generation</td>
+            <td>Image Generation</td>
         </tr>
         <tr>
           <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">GPT-4</td>
@@ -353,6 +376,7 @@
           <td>1 trillion</td>
           <td>Natural Language Processing</td>
           <td>Natural Language Processing</td>
+          <td>Natural Language Processing</td>
         </tr>
         <tr>
           <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">GPT-4</td>
@@ -361,6 +385,7 @@
           <td>1 trillion</td>
           <td>Natural Language Processing</td>
           <td>Natural Language Processing</td>
+          <td>Image Generation</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">T5</td>
@@ -368,6 +393,7 @@
             <td>October 2019</td>
             <td>11 billion</td>
             <td>Text-to-Text Transfer</td>
+            <td>Image Generation</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">GPT-3.5</td>
@@ -375,6 +401,8 @@
             <td>November 2022</td>
             <td>175 billion</td>
             <td>Natural Language Processing</td>
+            <td>Image Generation</td>
+            <td>Image Generation</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Codex</td>
@@ -480,6 +508,7 @@
             <td>February 2020</td>
             <td>Unlimited</td>
             <td>Image Generation</td>
+            <td>Image Generation</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">FLAN</td>
@@ -522,6 +551,8 @@
             <td>October 2021</td>
             <td>530 billion</td>
             <td>Natural Language Processing</td>
+            <td>Natural Language Processing</td>
+            <td>Image Generation</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">DeepSpeed</td>
@@ -530,17 +561,23 @@
             <td>Not disclosed</td>
             <td>AI Training Optimization</td>
             <td>AI Training Optimization</td>
+            <td>Natural Language Processing</td>
         </tr>
+
+        
     </tbody>
 </table>
 
 
 
     
-   
+  
+
    
   </div>
 </section>
+
+
 
     <script src="assets/js/tables.js"></script>
     <script src="assets/js/empleados.js" id="scripts"></script>

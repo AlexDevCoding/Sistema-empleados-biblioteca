@@ -3602,13 +3602,13 @@
                   tableRender: !1,
                   diffDomOptions: { valueDiffing: !1 },
                   labels: {
-                    placeholder: "Search...",
-                    searchTitle: "Search within table",
-                    perPage: "entries per page",
+                    placeholder: "Buscar...",
+                    searchTitle: "Buscar dentro de la tabla",
+                    perPage: "entradas por página",
                     pageTitle: "Page {page}",
-                    noRows: "No entries found",
-                    noResults: "No results match your search query",
-                    info: "Showing {start} to {end} of {rows} entries",
+                    noRows: "No se encontraron entradas",
+                    noResults: "Ningún resultado coincide con su consulta de búsqueda",
+                    info: "Mostrando {start} a {end} de {rows} entradas",
                   },
                   template: (t, e) =>
                     `<div class='${t.classes.top}'>\n    ${
