@@ -3,7 +3,8 @@ if (document.getElementById("pagination-table") && typeof simpleDatatables.DataT
         paging: true,
         perPage: 10,
         perPageSelect: [5, 10, 15, 20, 25],
-        sortable: false
+        sortable: false,
+        
     });
 }
 // npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch
