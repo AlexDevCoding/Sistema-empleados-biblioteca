@@ -1,4 +1,4 @@
-if (document.getElementById("pagination-table") && typeof simpleDatatables.DataTable !== 'undefined') {
+if (document.getElementById("pagination-table", ) && typeof simpleDatatables.DataTable !== 'undefined') {
     const dataTable = new simpleDatatables.DataTable("#pagination-table", {
         paging: true,
         perPage: 10,
@@ -7,4 +7,9 @@ if (document.getElementById("pagination-table") && typeof simpleDatatables.DataT
         
     });
 }
+
+
+
+
+
 // npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch
