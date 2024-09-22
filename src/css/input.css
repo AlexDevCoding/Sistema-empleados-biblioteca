@@ -10,3 +10,20 @@ th {
     color: white;
 }
 
+/* body {
+    background-image: url(../assets/Img/WhatsApp\ Image\ 2024-08-22\ at\ 1.28.58\ PM.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+} */
+
+
+@media (max-width: 400px) {
+    #unifica {
+        padding: 0px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+    
+    }
+  }

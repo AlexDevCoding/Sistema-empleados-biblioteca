@@ -4,11 +4,13 @@ if (document.getElementById("pagination-table", ) && typeof simpleDatatables.Dat
         perPage: 10,
         perPageSelect: [5, 10, 15, 20, 25],
         sortable: false,
-        
+
     });
 }
 
-
+document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementById('defaultModalButton').click();
+});
 
 
 
