@@ -64,7 +64,7 @@
     <ul class="space-y-2 font-medium">
       <li>
         <a
-          href="#"
+          href="index.html"
           class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
         >
           <svg
@@ -110,15 +110,15 @@
         </a>
         <ul id="dropdown-example" class="hidden py-2 space-y-2">
           <li>
-            <a href="#" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
+            <a href="Asistencias.html" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
             hover:text-white dark:text-white dark:hover:bg-gray-700">Asistencias</a>
          </li>
           <li>
-             <a href="#" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
+             <a href="lista-empleados.html" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
              hover:text-white dark:text-white dark:hover:bg-gray-700">Lista de Empleados</a>
           </li>
           <li>
-            <a href="#" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
+            <a href="permisos-vacaciones.html" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
             hover:text-white dark:text-white dark:hover:bg-gray-700">Permisos Y Vacaciones</a>
          </li>
           
@@ -239,18 +239,154 @@
 
             <h1 class=" text-[28px]">Lista de Asistencias</h1>
           
-            <button onclick="window.location.href='https://www.freecodecamp.org/';" class="bg-slate-950 text-slate-400 
+            <button  class="bg-slate-950 text-slate-400 
             border border-slate-400 
             font-medium overflow-hidden relative 
             px-4 py-2 rounded-md hover:brightness-150 
             hover: hover:border-b a
-            ctive:opacity-75 outline-none duration-300 group">
+            ctive:opacity-75 outline-none duration-300 group" id="defaultModalButton" data-modal-target="defaultModal" data-modal-toggle="defaultModal">
               <span class="bg-slate-400 
               shadow-slate-400 absolute -top-[150%] 
               left-0 inline-flex w-80 h-[5px] rounded-md 
               opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
              Añadir Asistencia
             </button>
+
+            <div id="defaultModal" tabindex="-1" aria-hidden="true"
+            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full">
+            <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
+              <!-- Modal content -->
+              <div class="relative p-4 bg-[#0b1739] rounded-lg shadow  sm:p-5">
+                <!-- Modal header -->
+                <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-gray-600">
+                  <h3 class="text-lg font-semibold text-white dark:text-white">
+                    Añadir Asistencia
+                  </h3>
+                  <button type="button"
+                    class="text-gray-400 bg-transparent  rounded-lg text-sm p-1.5 ml-auto inline-flex items-center  hover:brightness-150 "
+                    data-modal-toggle="defaultModal">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="sr-only">Cerrar Modal</span>
+                  </button>
+                </div>
+                <!-- Modal body -->
+                <form action="#">
+                  <div class="grid gap-4 mb-4 ">
+                    <div>
+                      <label for="name" class="block mb-2 text-sm font-medium text-white">Nombre Completo</label>
+                      <input type="text" name="name" id="name" class="bg-[#060d23] border
+                             text-white text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full 
+                             p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
+                             dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                        placeholder="Ingresar nombre completo" required>
+                    </div>
+
+                    <div class="">
+                      <label class="block text-sm font-medium text-white mb-2">Seleccionar Fecha</label>
+    
+                      <div id="date-range-picker" date-rangepicker class="flex items-center">
+                        <div class="relative w-[100%]">
+                          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                              <path
+                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                            </svg>
+                          </div>
+                          <input datepicker id="default-datepicker" name="start" type="text"
+                            class="bg-[#060d23] border  text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Fecha Inicio">
+                        </div>
+    
+    
+                      </div>
+    
+                    </div>
+
+
+    
+                 
+    
+    
+    
+    
+    
+                    <div>
+                      <label for="category" class="block mb-2 text-sm font-medium text-white ">Departamento</label>
+                      <select id="category"
+                        class="bg-[#060d23] border  text-gray-400 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                        <option selected="">Seleccionar Departamento</option>
+                        <option value="Dirección General">Dirección General</option>
+                        <option value="Administración y Finanzas">Administración y Finanzas</option>
+                        <option value="Tecnología e Infraestructura">Tecnología e Infraestructura</option>
+                        <option value="Servicios al Usuario">Servicios al Usuario</option>
+                        <option value="Formación y Educación">Formación y Educación</option>
+                        <option value="Proyectos Especiales y Desarrollo Comunitario">Proyectos Especiales y Desarrollo Comunitario</option>
+                        <option value="Comunicación y Relaciones Públicas">Comunicación y Relaciones Públicas</option>
+                      </select>
+                    </div>
+    
+              
+    
+    
+    
+    
+                    <div>
+                      <label for="Teléfono" class="block mb-2 text-sm font-medium text-white">Teléfono</label>
+                      <input type="tel" name="telefono" id="telefono" class="bg-[#060d23] border text-white 
+                          text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 
+                          block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 
+                          dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500
+                           dark:focus:border-primary-500" placeholder="Ingresar telefono" pattern="\d{10,11}"
+                        title="El teléfono debe contener 10 u 11 dígitos" required required>
+    
+                    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                  </div>
+                  <button type="button" class="text-white bg-blue-700 
+                          hover:bg-[#235dff] focus:ring-4 
+                          focus:ring-blue-300 font-medium rounded-lg 
+                          text-sm px-5 py-2.5 me-2 mb-2  
+                          ">Añadir Solicitud</button>
+    
+    
+    
+              </div>
+    
+              </form>
+            </div>
+          </div>
+
+
+            
+
+
+
+
+
+
 
 
           </div>
