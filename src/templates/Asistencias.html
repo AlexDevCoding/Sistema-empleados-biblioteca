@@ -280,10 +280,10 @@
                     <div>
                       <label for="name" class="block mb-2 text-sm font-medium text-white">Nombre Completo</label>
                       <input type="text" name="name" id="name" class="bg-[#060d23] border
-                             text-white text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full 
+                      text-gray-400 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full 
                              p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
                              dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                        placeholder="Ingresar nombre completo" required>
+                        placeholder="Ingresar Nombre Completo" required>
                     </div>
 
                     <div class="">
@@ -299,8 +299,8 @@
                             </svg>
                           </div>
                           <input datepicker id="default-datepicker" name="start" type="text"
-                            class="bg-[#060d23] border  text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="Fecha Inicio">
+                            class="bg-[#060d23] border  text-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Fecha">
                         </div>
     
     
@@ -317,17 +317,14 @@
     
     
                     <div>
-                      <label for="category" class="block mb-2 text-sm font-medium text-white ">Departamento</label>
+                      <label for="category" class="block mb-2 text-sm font-medium text-white ">Estado</label>
                       <select id="category"
                         class="bg-[#060d23] border  text-gray-400 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                        <option selected="">Seleccionar Departamento</option>
-                        <option value="Dirección General">Dirección General</option>
-                        <option value="Administración y Finanzas">Administración y Finanzas</option>
-                        <option value="Tecnología e Infraestructura">Tecnología e Infraestructura</option>
-                        <option value="Servicios al Usuario">Servicios al Usuario</option>
-                        <option value="Formación y Educación">Formación y Educación</option>
-                        <option value="Proyectos Especiales y Desarrollo Comunitario">Proyectos Especiales y Desarrollo Comunitario</option>
-                        <option value="Comunicación y Relaciones Públicas">Comunicación y Relaciones Públicas</option>
+                        <option selected="">Seleccionar Estado</option>
+                        <option value="A tiempo">A tiempo</option>
+                        <option value="Tardanza">Tardanza</option>
+                        <option value="Ausente">Ausente</option>
+        
                       </select>
                     </div>
     
@@ -335,17 +332,28 @@
     
     
     
-    
                     <div>
-                      <label for="Teléfono" class="block mb-2 text-sm font-medium text-white">Teléfono</label>
-                      <input type="tel" name="telefono" id="telefono" class="bg-[#060d23] border text-white 
-                          text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 
-                          block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 
-                          dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500
-                           dark:focus:border-primary-500" placeholder="Ingresar telefono" pattern="\d{10,11}"
-                        title="El teléfono debe contener 10 u 11 dígitos" required required>
-    
-                    </div>
+                      <label for="start-time" class="block mb-2 text-sm font-medium text-white dark:text-white">Hora de entrada</label>
+                      <div class="relative">
+                          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                  <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd"/>
+                              </svg>
+                          </div>
+                          <input type="time" id="start-time" class="bg-[#060d23] border  text-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 min="09:00" max="18:00" value="00:00" required />
+                      </div>
+                  </div>
+                  <div>
+                      <label for="end-time" class="block mb-2 text-sm font-medium text-white dark:text-white">Hora de salida</label>
+                      <div class="relative">
+                          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                  <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd"/>
+                              </svg>
+                          </div>
+                          <input type="time" id="end-time" class="bg-[#060d23] border   text-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 placeholder-gray-500  dark:focus:ring-blue-500 dark:focus:border-blue-500 "  min="09:00" max="18:00" value="00:00" required />
+                      </div>
+                  </div>
     
     
     
@@ -369,7 +377,7 @@
                           hover:bg-[#235dff] focus:ring-4 
                           focus:ring-blue-300 font-medium rounded-lg 
                           text-sm px-5 py-2.5 me-2 mb-2  
-                          ">Añadir Solicitud</button>
+                          ">Añadir Asistencia</button>
     
     
     
