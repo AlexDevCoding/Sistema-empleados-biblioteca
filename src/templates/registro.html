@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/output.css" />
+    <link rel="stylesheet" href="../css/styles.css">
     <title>Registro</title>
   </head>
   <body class="bg-[#060d23]">
@@ -112,8 +113,8 @@
           >
         </div>
         <div class="relative z-0 w-full mb-5 group">
-            <select name="tipo_usuario" id="tipos" required class="bg-[rgb(6,13,35)] text-white border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-              <option selected>Seleccione tipo de usuario</option>
+            <select name="tipo_usuario" id="tipos" class="bg-[rgb(6,13,35)] text-white border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <option disabled selected>Seleccione tipo de usuario</option>
               <option value="Administrador">Administrador</option>
               <option value="Empleado">Empleado</option>
           
@@ -137,12 +138,14 @@
 
     <div id="modalExito" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
       <div class="bg-white p-4 rounded-lg shadow-lg flex items-center space-x-4 w-96">
-          <div class="w-12 h-12 flex items-center justify-center bg-emerald-500 rounded-full">
-          
-          </div>
+        <div class="w-12 h-12 flex items-center justify-center bg-emerald-500 rounded-full">
+          <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+      </div>
           <div class="flex-1">
-              <h3 class="text-lg font-semibold text-emerald-600">Success</h3>
-              <p class="text-gray-600">Your account was registered!</p>
+              <h3 class="text-lg font-semibold text-emerald-600">Éxito</h3>
+              <p class="text-gray-600">Su cuenta ha sido registrada!</p>
           </div>
           <button onclick="cerrarModal('modalExito')" class="text-gray-500">X</button>
       </div>

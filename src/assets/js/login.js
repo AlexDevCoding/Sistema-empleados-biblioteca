@@ -33,7 +33,7 @@ function showModal(title, message) {
   }
 }
 
-document.getElementById('modalClose').addEventListener('click', function() {
+let cerrarModal = document.querySelector('#t').addEventListener('click', function() {
   const modal = document.getElementById('modal');
   if (modal) {
     modal.classList.add('hidden');
