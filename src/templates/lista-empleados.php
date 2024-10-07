@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link href="../css/output.css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="../assets/webfont/tabler-icons-outline.css">
 </head>
 
 <body class="bg-[#060d23]">

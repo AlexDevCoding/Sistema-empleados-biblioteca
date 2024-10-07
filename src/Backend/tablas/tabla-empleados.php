@@ -16,9 +16,9 @@
                     echo '<td>' . htmlspecialchars($row['estado']) . '</td>';
                     echo '<td>' . htmlspecialchars($row['telefono']) . '</td>';
                     echo '<td>';
-                    // Aquí puedes agregar los botones de acción, como Editar y Eliminar
-                    echo '<button onclick="editarEmpleado(' . htmlspecialchars($row['id']) . ')">Editar</button>';
-                    echo '<button onclick="eliminarEmpleado(' . htmlspecialchars($row['id']) . ')">Eliminar</button>';
+                    // Botones de acción con iconos
+                    echo '<button onclick="editarEmpleado(' . htmlspecialchars($row['id']) . ')"><i class="ti ti-pencil"></i></button>';
+                    echo '<button onclick="if(confirm(\'¿Estás seguro de que deseas eliminar este empleado?\')) eliminarEmpleado(' . htmlspecialchars($row['id']) . ')"><i class="ti ti-trash"></i></button>';
                     echo '</td>';
                     echo '</tr>';
                 }
