@@ -81,9 +81,9 @@
             hover:text-white dark:text-white dark:hover:bg-gray-700">Asistencias</a>
             </li>
             <li>
-              <a href="lista-empleados.html" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
+             <a href="lista-empleados.php" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
              hover:text-white dark:text-white dark:hover:bg-gray-700">Lista de Empleados</a>
-            </li>
+          </li>
             <li>
               <a href="permisos-vacaciones.html" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
             hover:text-white dark:text-white dark:hover:bg-gray-700">Permisos Y Vacaciones</a>
@@ -224,11 +224,11 @@
               </button>
             </div>
             <!-- Modal body -->
-            <form action="#">
+            <form action="../Backend/añadir-empleado.php" method="POST">
               <div class="grid gap-4 mb-4 ">
                 <div>
                   <label for="name" class="block mb-2 text-sm font-medium text-white">Nombre Completo</label>
-                  <input type="text" name="name" id="name" class="bg-[#060d23] border
+                  <input type="text" name="nombre_completo" id="name" class="bg-[#060d23] border
                          text-white text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full 
                          p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
                          dark:focus:ring-primary-500 dark:focus:border-primary-500"
@@ -237,7 +237,7 @@
 
                 <div>
                   <label for="Identidad" class="block mb-2 text-sm font-medium text-white">Cédula de Identidad</label>
-                  <input type="text" name="cedula" id="cedula_identidad" class="bg-[#060d23] border  text-white 
+                  <input type="text" name="cedula_identidad" id="cedula_identidad" class="bg-[#060d23] border  text-white 
                       text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 
                       block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 
                       dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500
@@ -248,7 +248,7 @@
 
                 <div>
                   <label for="name" class="block mb-2 text-sm font-medium text-white">Puesto De Trabajo</label>
-                  <input type="text" name="name" id="name" class="bg-[#060d23] border 
+                  <input type="text" name="puesto" id="name" class="bg-[#060d23] border 
                        text-white text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full 
                        p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
                        dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Puesto de Trabajo"
@@ -262,8 +262,9 @@
                 <div>
                   <label for="category" class="block mb-2 text-sm font-medium text-white ">Departamento</label>
                   <select id="category"
-                    class="bg-[#060d23] border  text-gray-400 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                    <option selected="">Seleccionar Departamento</option>
+                    class="bg-[#060d23] border  text-gray-400 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                    " name="departamento">
+                    <option selected="" disabled>Seleccionar Departamento</option>
                     <option value="Dirección General">Dirección General</option>
                     <option value="Administración y Finanzas">Administración y Finanzas</option>
                     <option value="Tecnología e Infraestructura">Tecnología e Infraestructura</option>
@@ -286,7 +287,7 @@
                             d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                         </svg>
                       </div>
-                      <input datepicker id="default-datepicker" name="start" type="text"
+                      <input datepicker id="default-datepicker" name="fecha_ingreso" type="text"
                         class="bg-[#060d23] border  text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Fecha Inicio">
                     </div>
@@ -296,7 +297,13 @@
 
                 </div>
 
-
+                <div>
+                  <label for="estado" class="block mb-2 text-sm font-medium text-white">Estado</label>
+                  <select name="estado" id="estado" class="bg-[#060d23] border text-gray-400 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required>
+                    <option value="Activo">Activo</option>
+                    <option value="Inactivo">Inactivo</option>
+                  </select>
+                </div>
 
 
                 <div>
@@ -328,7 +335,7 @@
 
 
               </div>
-              <button type="button" class="text-white bg-blue-700 
+              <button type="submit" class="text-white bg-blue-700 
                       hover:bg-[#235dff] focus:ring-4 
                       focus:ring-blue-300 font-medium rounded-lg 
                       text-sm px-5 py-2.5 me-2 mb-2  
@@ -363,45 +370,16 @@
             <th>Fecha de Ingreso</th>
             <th>Estado</th>
             <th>Teléfono</th>
-            <th>Asistencias</th>
+         
             <th>Acciones</th>
           </tr>
         </thead>
-        <tbody>
-          <tr class="text-white">
-            <td>Juan Pérez</td>
-            <td>12345678</td>
-            <td>Ingeniero</td>
-            <td>Desarrollo</td>
-            <td>01-05-2020</td>
-            <td>Activo</td>
-            <td>987654321</td>
-            <td>95%</td>
-            <td>Editar</td>
-          </tr>
-          <tr class="text-white">
-            <td>Ana García</td>
-            <td>87654321</td>
-            <td>Analista</td>
-            <td>Marketing</td>
-            <td>15-08-2019</td>
-            <td>Activo</td>
-            <td>123456789</td>
-            <td>98%</td>
-            <td>Editar</td>
-          </tr>
-          <tr class="text-white">
-            <td>Carlos López</td>
-            <td>12312312</td>
-            <td>Gerente</td>
-            <td>Administración</td>
-            <td>10-03-2018</td>
-            <td>Inactivo</td>
-            <td>321321321</td>
-            <td>80%</td>
-            <td>Editar</td>
+        <tbody id="empleados-table">
+  
+        <?php include '../Backend/tablas/tabla-empleados.php'
+        ?>
 
-          </tr>
+
         </tbody>
       </table>
 
@@ -415,11 +393,14 @@
     </div>
   </section>
 
-
-
   <script src="../assets/js/tables.js"></script>
   <script src="../assets/js/empleados.js" id="scripts"></script>
   <script type="module" src="../assets/js/flowbite.js" id="scripts"></script>
+
+ 
+
+
+
 </body>
 
 </html>
