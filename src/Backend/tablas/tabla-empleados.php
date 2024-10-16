@@ -15,10 +15,10 @@
                     echo '<td>' . htmlspecialchars($row['fecha_ingreso']) . '</td>';
                     echo '<td>' . htmlspecialchars($row['estado']) . '</td>';
                     echo '<td>' . htmlspecialchars($row['telefono']) . '</td>';
-                    echo '<td>';
+                    echo '<td class="celda">';
                     // Botones de acción con iconos
-                    echo '<button onclick="editarEmpleado(' . htmlspecialchars($row['id']) . ')"><i class="ti ti-pencil"></i></button>';
-                    echo '<button onclick="if(confirm(\'¿Estás seguro de que deseas eliminar este empleado?\')) eliminarEmpleado(' . htmlspecialchars($row['id']) . ')"><i class="ti ti-trash"></i></button>';
+                    echo '<button onclick="editarEmpleado(' . htmlspecialchars($row['id']) . ')" class="boton"><i class="ti ti-pencil "></i></button>';
+                    echo '<button onclick="if(confirm(\'¿Estás seguro de que deseas eliminar este empleado?\')) eliminarEmpleado(' . htmlspecialchars($row['id']) . ')" class="eliminar"><i class="ti ti-trash"></i></button>';
                     echo '</td>';
                     echo '</tr>';
                 }

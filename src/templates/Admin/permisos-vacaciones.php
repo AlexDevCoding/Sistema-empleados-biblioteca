@@ -355,43 +355,21 @@
       
         <tr class="uppercase">
           
-            <th>Empleado</th>
-            <th>Tipo</th>
+            <th>Nombre Completo</th>
+            <th>Tipo De Permiso</th>
             <th>Fecha inicio</th>
             <th>Fecha Fin</th>
             <th>Estado</th>
             <th>Acciones</th>
         </tr>
     </thead>
-    <tbody>
-        <tr class="text-white">
-            <td >Juan Pérez</td>
-            <td>12345678</td>
-            <td>Ingeniero</td>
-            <td>Desarrollo</td>
-            <td>01-05-2020</td>
-            <td>Activo</td>
-          
-        </tr>
-        <tr class="text-white">
-            <td >Ana García</td>
-            <td>87654321</td>
-            <td>Analista</td>
-            <td>Marketing</td>
-            <td>15-08-2019</td>
-            <td>Activo</td>
-         
-        </tr>
-        <tr class="text-white">
-            <td>Carlos López</td>
-            <td>12312312</td>
-            <td>Gerente</td>
-            <td>Administración</td>
-            <td>10-03-2018</td>
-            <td>Inactivo</td>
+    <tbody id="empleados-table">
         
+        <?php
+          include '../Backend/tablas/Permisos-Vacaciones.php'
+        ?>
           
-        </tr>
+       
     </tbody>
 </table>
 
@@ -407,8 +385,8 @@
 
   </section>
 
-<script src="../assets/js/tables.js"></script>
-<script src="../assets/js/empleados.js"></script>
-<script type="module" src="../assets/js/flowbite.js" id="scripts"></script>
+  <script src="../assets/js/tables.js"></script>
+  <script src="../assets/js/empleados.js" id="scripts"></script>
+  <script type="module" src="../assets/js/flowbite.js" id="scripts"></script>
 </body>
 </html>

@@ -11,8 +11,9 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
   .then(data => {
     if (data.status === 'error') {
       showModal('Inconveniente', data.message);
-    } else {
-      window.location.href = 'index.html';
+    } else if (data.status === 'success') {
+      // Redirigir a la URL basada en el rol
+      window.location.href = data.redirect_url;
     }
   })
   .catch(error => {

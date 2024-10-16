@@ -4,3 +4,8 @@ body {
     background-position: center;
     height: 100vh;
 }
+
+
+input:autofill {
+    background: red ;
+}

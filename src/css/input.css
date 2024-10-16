@@ -10,7 +10,30 @@ th {
     color: white;
 }
 
+.celda {
+    display: inline-flex;
+    gap: 20px;
+}
 
+.boton {
+    background: #60a5fa;
+    padding: 5px;
+}
+
+.ti-pencil {
+    color:white;
+    font-size: 30px;
+}
+
+.eliminar {
+    padding: 5px;
+    background: red;
+}
+
+.ti-trash {
+  font-size: 30px;
+  color: white;
+}
 
 @media (max-width: 400px) {
     #unifica {
