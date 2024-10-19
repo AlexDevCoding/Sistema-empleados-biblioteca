@@ -1621,10 +1621,6 @@ input:checked + .toggle-bg {
   height: 100vh;
 }
 
-.h-20 {
-  height: 5rem;
-}
-
 .w-1\/2 {
   width: 50%;
 }
@@ -1695,10 +1691,6 @@ input:checked + .toggle-bg {
 
 .flex-shrink {
   flex-shrink: 1;
-}
-
-.flex-shrink-0 {
-  flex-shrink: 0;
 }
 
 .origin-\[0\] {
@@ -2102,6 +2094,14 @@ input:checked + .toggle-bg {
 
 .p-\[30px\] {
   padding: 30px;
+}
+
+.p-40 {
+  padding: 10rem;
+}
+
+.p-\[5px\] {
+  padding: 5px;
 }
 
 .px-0 {
@@ -2624,11 +2624,6 @@ th {
   top: 150%;
 }
 
-.group:hover .group-hover\:text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .peer:-moz-placeholder-shown ~ .peer-placeholder-shown\:translate-y-0 {
   --tw-translate-y: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2810,11 +2805,6 @@ th {
 .dark\:focus\:ring-gray-600:focus:is(.dark *) {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(75 85 99 / var(--tw-ring-opacity));
-}
-
-.group:hover .dark\:group-hover\:text-white:is(.dark *) {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .peer:focus ~ .peer-focus\:dark\:text-blue-500:is(.dark *) {

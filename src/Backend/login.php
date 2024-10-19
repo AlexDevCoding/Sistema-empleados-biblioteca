@@ -22,11 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['usuario'] = $usuario_db;
             $_SESSION['rol'] = $rol;
 
-            // Redirección basada en el rol
+          
             if ($rol == 'Administrador') {
-                $redirect_url = '../templates/admin/tablero-admin.html'; // Redirigir al dashboard de administrador
+                $redirect_url = '../templates/admin/tablero-admin.html';
             } elseif ($rol == 'Empleado') {
-                $redirect_url = '../templates/empleado/tablero-empleados.html'; // Redirigir al dashboard de empleado
+                $redirect_url = '../templates/empleado/tablero-empleados.html'; 
             }
 
             echo json_encode(['status' => 'success', 'rol' => $rol, 'redirect_url' => $redirect_url]);
