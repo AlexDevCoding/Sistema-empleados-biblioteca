@@ -87,7 +87,7 @@
         </a>
         <ul id="dropdown-example" class="hidden py-2 space-y-2">
           <li>
-            <a href="Asistencias.html" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
+            <a href="asistencias.php" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
             hover:text-white dark:text-white dark:hover:bg-gray-700">Asistencias</a>
          </li>
           <li>
@@ -95,7 +95,7 @@
              hover:text-white dark:text-white dark:hover:bg-gray-700">Lista de Empleados</a>
           </li>
           <li>
-            <a href="permisos-vacaciones.html" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
+            <a href="permisos-vacaciones.php" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
             hover:text-white dark:text-white dark:hover:bg-gray-700">Permisos Y Vacaciones</a>
          </li>
           
@@ -176,7 +176,7 @@
 
             <h1 class=" text-[28px]">Lista de Asistencias</h1>
           
-            <button  class="bg-slate-950 text-slate-400 
+            <button  class="bg-slate-950 text-slate-400 hidden
             border border-slate-400 
             font-medium overflow-hidden relative 
             px-4 py-2 rounded-md hover:brightness-150 
@@ -360,37 +360,8 @@
         </tr>
     </thead>
     <tbody>
-        <tr class="text-white">
-            <td >Juan Pérez</td>
-            <td>12345678</td>
-            <td>Ingeniero</td>
-            <td>Desarrollo</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-green-400">A tiempo</td>
-            
-          
-           
-        </tr>
-        <tr class="text-white">
-            <td >Ana García</td>
-            <td>87654321</td>
-            <td>Analista</td>
-            <td>Marketing</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-yellow-400">Tardanza</td>
-         
-           
-          
-        </tr>
-        <tr class="text-white">
-            <td>Carlos López</td>
-            <td>12312312</td>
-            <td>Gerente</td>
-            <td>Administración</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-red-400">Ausente</td>
-           
-         
-           
-          
-        </tr>
+      <?php include '../../Backend/tablas/obtener-asistencias.php'
+        ?>
     </tbody>
 </table>
 

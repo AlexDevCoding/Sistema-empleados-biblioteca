@@ -6,6 +6,11 @@ include '../conexión.php';
 $query = "SELECT departamento, COUNT(*) as total FROM empleados GROUP BY departamento";
 $result = mysqli_query($conn, $query);
 
+
+$totalEmpleadosQuery = "SELECT COUNT(*) as total FROM empleados";
+$totalResult = mysqli_query($conn, $totalEmpleadosQuery);
+$totalEmpleados = mysqli_fetch_assoc($totalResult)['total'];
+
 $departamentos = [];
 $totales = [];
 
@@ -19,6 +24,7 @@ if ($result) {
 
 echo json_encode([
     'departamentos' => $departamentos,
-    'totales' => $totales
+    'totales' => $totales,
+    'totalEmpleados' => $totalEmpleados
 ]);
 ?>

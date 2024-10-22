@@ -13,8 +13,7 @@ fetch('../../Backend/graficas/index.php')
   .then(data => {
 
 
-  const datos = document.querySelector('#empleados');
-  const totalEmpleados = data.totalEmpleados; 
+
 
     const pieData = data.departamentos.map((nombre, index) => ({
       value: data.totales[index],
@@ -22,7 +21,7 @@ fetch('../../Backend/graficas/index.php')
       
     }));
     
-    datos.textContent = ` ${totalEmpleados}`;
+ 
     
     var option = {
       title: {

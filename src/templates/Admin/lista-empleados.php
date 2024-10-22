@@ -69,7 +69,7 @@
         </a>
         <ul id="dropdown-example" class="hidden py-2 space-y-2">
           <li>
-            <a href="Asistencias.html" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
+            <a href="asistencias.php" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
             hover:text-white dark:text-white dark:hover:bg-gray-700">Asistencias</a>
          </li>
           <li>
@@ -77,7 +77,7 @@
              hover:text-white dark:text-white dark:hover:bg-gray-700">Lista de Empleados</a>
           </li>
           <li>
-            <a href="permisos-vacaciones.html" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
+            <a href="permisos-vacaciones.php" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
             hover:text-white dark:text-white dark:hover:bg-gray-700">Permisos Y Vacaciones</a>
          </li>
           
