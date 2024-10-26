@@ -9,15 +9,14 @@ if (isset($_POST['cedula']) && isset($_POST['fecha']) && isset($_POST['hora_entr
     $hora_salida = $_POST['hora_salida'];
     $estado = $_POST['estado'];
     
-    // Cambié $fecha_ingreso a $fecha
+
     $fecha_obj = DateTime::createFromFormat('d/m/Y', $fecha);
     if (!$fecha_obj) {
         echo "Formato de fecha inválido. Use DD/MM/YYYY.";
         exit;
     }
-    $fecha = $fecha_obj->format('Y-m-d'); // Convertir a YYYY-MM-DD para la base de datos
-    
-    // Consulta para obtener el empleado_id basado en la cédula
+    $fecha = $fecha_obj->format('Y-m-d'); 
+ 
     $queryEmpleado = "SELECT id FROM empleados WHERE cedula_identidad = ?";
     $stmtEmpleado = $conn->prepare($queryEmpleado);
     $stmtEmpleado->bind_param("s", $cedula);
@@ -28,7 +27,7 @@ if (isset($_POST['cedula']) && isset($_POST['fecha']) && isset($_POST['hora_entr
         $empleado = $resultEmpleado->fetch_assoc();
         $empleado_id = $empleado['id'];
 
-        // Insertar la asistencia
+    
         $queryAsistencia = "INSERT INTO asistencias (empleado_id, fecha, hora_entrada, hora_salida, estado) VALUES (?, ?, ?, ?, ?)";
         $stmtAsistencia = $conn->prepare($queryAsistencia);
         $stmtAsistencia->bind_param("issss", $empleado_id, $fecha, $hora_entrada, $hora_salida, $estado);

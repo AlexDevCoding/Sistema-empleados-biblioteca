@@ -355,7 +355,7 @@
             <th>Hora de entrada</th>
             <th>Hora de salida</th>
             <th>Estado</th>
-          
+            <th>Acción</th>
            
         </tr>
     </thead>
