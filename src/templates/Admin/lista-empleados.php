@@ -98,6 +98,38 @@
 
       <li>
         <a
+          href=""
+          class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
+        >
+        <i class="ti ti-report-search" style="font-size: 25px;"></i>
+          <span class="flex-1 ms-3 whitespace-nowrap">Reportes</span>
+        </a>
+      </li>
+
+      <li>
+        <a
+          href=""
+          class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
+        >
+      
+        <i class="ti ti-users-group" style="font-size: 25px;"></i>
+          <span class="flex-1 ms-3 whitespace-nowrap">Bitacora de usuarios</span>
+        </a>
+      </li>
+
+      <li>
+        <a
+          href=""
+          class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
+        >
+          <i class="ti ti-database" style="font-size: 25px;"></i>
+          <span class="flex-1 ms-3 whitespace-nowrap">Base De Datos</span>
+        </a>
+      </li>
+
+
+      <li>
+        <a
           href="#"
           class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
         >
