@@ -29,7 +29,7 @@ try {
         }
 
       
-        $fecha_obj = DateTime::createFromFormat('d/m/Y', $fecha_ingreso);
+        $fecha_obj = DateTime::createFromFormat('m/d/Y', $fecha_ingreso);
         if (!$fecha_obj) {
             throw new Exception("Formato de fecha inválido. Use DD/MM/YYYY.");
         }

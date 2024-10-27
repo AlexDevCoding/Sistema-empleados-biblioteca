@@ -12,17 +12,17 @@ fetch('../../Backend/graficas/index.php')
   .then(response => response.json()) 
   .then(data => {
 
+console.log(data);
+const datos = document.querySelector('#empleados');
+const datos2 = document.querySelector('#asistencias');
 
-  const datos = document.querySelector('#empleados');
-  const totalEmpleados = data.totalEmpleados; 
+// Asumiendo que `data` es la respuesta JSON obtenida
+const totalEmpleados = data.totalEmpleados; 
+const tasaAsistencias = data.tasaAsistencias;
 
-    const pieData = data.departamentos.map((nombre, index) => ({
-      value: data.totales[index],
-      name: nombre
-      
-    }));
-    
-    datos.textContent = ` ${totalEmpleados}`;
+datos.textContent = `${totalEmpleados}`;
+datos2.textContent = `${tasaAsistencias}%`; // Mostrar la tasa de asistencias con el símbolo de porcentaje
+
     
     var option = {
       title: {

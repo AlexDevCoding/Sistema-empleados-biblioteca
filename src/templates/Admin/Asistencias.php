@@ -208,7 +208,7 @@
 
             <h1 class=" text-[28px]">Lista de Asistencias</h1>
           
-            <button  class="bg-slate-950 text-slate-400 hidden
+            <button  class="bg-slate-950 text-slate-400 
             border border-slate-400 
             font-medium overflow-hidden relative 
             px-4 py-2 rounded-md hover:brightness-150 
@@ -288,8 +288,8 @@
                     <div>
                       <label for="category" class="block mb-2 text-sm font-medium text-white ">Estado</label>
                       <select id="category"
-                        class="bg-[#060d23] border  text-gray-400 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                        <option selected="">Seleccionar Estado</option>
+                        class="bg-[#060d23] border  text-gray-400 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+                        <option selected="" >Seleccionar Estado</option>
                         <option value="A tiempo">A tiempo</option>
                         <option value="Tardanza">Tardanza</option>
                         <option value="Ausente">Ausente</option>
