@@ -4,18 +4,17 @@ include('../../Backend/conexión.php');
 if (isset($_POST['cedula']) && isset($_POST['fecha']) && isset($_POST['hora_entrada']) && isset($_POST['hora_salida']) && isset($_POST['estado'])) {
     
     $cedula = $_POST['cedula'];
-    $fecha = $_POST['fecha']; // Asegúrate de que este formato sea DD/MM/YYYY
+    $fecha = $_POST['fecha'];
     $hora_entrada = $_POST['hora_entrada'];
     $hora_salida = $_POST['hora_salida'];
     $estado = $_POST['estado'];
     
-    // Validar el formato de fecha
-    $fecha_obj = DateTime::createFromFormat('m/d/Y', $fecha); // Cambiado a d/m/Y
+    $fecha_obj = DateTime::createFromFormat('d/m/Y', $fecha);
     if (!$fecha_obj) {
         echo "Formato de fecha inválido. Use DD/MM/YYYY.";
         exit;
     }
-    $fecha_convertida = $fecha_obj->format('Y-m-d'); // Convertir a YYYY-MM-DD
+    $fecha_convertida = $fecha_obj->format('Y-m-d');
  
     $queryEmpleado = "SELECT id FROM empleados WHERE cedula_identidad = ?";
     $stmtEmpleado = $conn->prepare($queryEmpleado);

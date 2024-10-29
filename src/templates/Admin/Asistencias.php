@@ -244,17 +244,17 @@
                   </button>
                 </div>
                 <!-- Modal body -->
-                <form action="#">
+                <form method="POST" action="../../Backend/tablas/registrar-asistencias.php" id="formulario-registro">
                   <div class="grid gap-4 mb-4 ">
                     <div>
-                      <label for="name" class="block mb-2 text-sm font-medium text-white">Nombre Completo</label>
-                      <input type="text" name="name" id="name" class="bg-[#060d23] border
-                      text-gray-400 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full 
-                             p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
-                             dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                        placeholder="Ingresar Nombre Completo" required>
+                      <label for="cedula" class="block mb-2 text-sm font-medium text-white">Cédula de Identidad</label>
+                      <input type="text" name="cedula" id="cedula" class="bg-[#060d23] border text-gray-400 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Ingresar Cédula" required>
                     </div>
-
+                
+                    <div>
+                      <label for="nombre" class="block mb-2 text-sm font-medium text-white">Nombre Completo</label>
+                      <input type="text" name="nombre" id="nombre_completo" class="bg-[#060d23] border text-gray-400 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Ingresar Nombre Completo">
+                  </div>
                     <div class="">
                       <label class="block text-sm font-medium text-white mb-2">Seleccionar Fecha</label>
     
@@ -267,12 +267,12 @@
                                 d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                             </svg>
                           </div>
-                          <input datepicker id="default-datepicker" name="start" type="text"
-                            class="bg-[#060d23] border  text-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="Fecha">
+                          <input datepicker id="default-datepicker" name="fecha" type="text"
+                          class="bg-[#060d23] border  text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="Fecha">
                         </div>
     
-    
+                     
                       </div>
     
                     </div>
@@ -287,9 +287,9 @@
     
                     <div>
                       <label for="category" class="block mb-2 text-sm font-medium text-white ">Estado</label>
-                      <select id="category"
-                        class="bg-[#060d23] border  text-gray-400 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
-                        <option selected="" >Seleccionar Estado</option>
+                      <select id="category" name="estado"
+                        class="bg-[#060d23] border  text-gray-400 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                        <option selected="">Seleccionar Estado</option>
                         <option value="A tiempo">A tiempo</option>
                         <option value="Tardanza">Tardanza</option>
                         <option value="Ausente">Ausente</option>
@@ -309,7 +309,7 @@
                                   <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd"/>
                               </svg>
                           </div>
-                          <input type="time" id="start-time" class="bg-[#060d23] border  text-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 min="09:00" max="18:00" value="00:00" required />
+                          <input type="time" name="hora_entrada" id="start-time" class="bg-[#060d23] border  text-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 min="09:00" max="18:00" value="00:00" required />
                       </div>
                   </div>
                   <div>
@@ -320,7 +320,7 @@
                                   <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd"/>
                               </svg>
                           </div>
-                          <input type="time" id="end-time" class="bg-[#060d23] border   text-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 placeholder-gray-500  dark:focus:ring-blue-500 dark:focus:border-blue-500 "  min="09:00" max="18:00" value="00:00" required />
+                          <input type="time" name="hora_salida" id="end-time" class="bg-[#060d23] border   text-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 placeholder-gray-500  dark:focus:ring-blue-500 dark:focus:border-blue-500 "  min="09:00" max="18:00" value="00:00" required />
                       </div>
                   </div>
     
@@ -342,7 +342,7 @@
     
     
                   </div>
-                  <button type="button" class="text-white bg-blue-700 
+                  <button type="submit" class="text-white bg-blue-700 
                           hover:bg-[#235dff] focus:ring-4 
                           focus:ring-blue-300 font-medium rounded-lg 
                           text-sm px-5 py-2.5 me-2 mb-2  
@@ -412,5 +412,6 @@
     <script src="../../assets/js/tables.js"></script>
     <script src="../../assets/js/empleados.js" id="scripts"></script>
     <script type="module" src="../../assets/js/flowbite.js" id="scripts"></script>
+    <script src="../../assets/js/buscador.js"></script>
 </body>
 </html>

@@ -42,6 +42,6 @@ echo json_encode([
     'totales' => $totales,
     'totalEmpleados' => $totalEmpleados,
     'totalAsistencias' => $totalAsistencias,
-    'tasaAsistencias' => round($tasaAsistencias, 2) // Redondear a 2 decimales
+    'tasaAsistencias' => round($tasaAsistencias, 2) 
 ]);
 ?>
