@@ -9,7 +9,7 @@
 </head>
 <body class="bg-[#060d23]">
     
-    <nav
+<nav
     class="fixed top-0 z-50 w-full bg-[#0b1739] dark:bg-gray-800 dark:border-gray-700" id="barra-de-navegacion"
   >
     <div class="px-3 py-3 lg:px-5 lg:pl-3">
@@ -53,7 +53,7 @@
       </div>
     </div>
   </nav>
-  
+
   <aside
   id="logo-sidebar"
   class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-[#081028] border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
@@ -116,7 +116,7 @@
 
       <li>
         <a
-          href=""
+          href="reportes.html"
           class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
         >
         <i class="ti ti-report-search" style="font-size: 25px;"></i>
@@ -126,7 +126,7 @@
 
       <li>
         <a
-          href=""
+          href="bitacora-usuarios.php"
           class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
         >
       
@@ -137,7 +137,7 @@
 
       <li>
         <a
-          href=""
+          href="bases-datos.html"
           class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
         >
           <i class="ti ti-database" style="font-size: 25px;"></i>
@@ -148,7 +148,7 @@
 
       <li>
         <a
-          href="#"
+          href="manual-usuario.html"
           class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
         >
         <i class="ti ti-help-octagon" style="font-size: 25px;"></i>

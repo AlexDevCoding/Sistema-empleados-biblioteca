@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="../../css/output.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../../assets/webfont/tabler-icons-outline.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/webfont/tabler-icons-outline.css">
+    <title>Document</title>
 </head>
-
 <body class="bg-[#060d23]">
-
 <nav
     class="fixed top-0 z-50 w-full bg-[#0b1739] dark:bg-gray-800 dark:border-gray-700" id="barra-de-navegacion"
   >
@@ -173,7 +171,9 @@
   </div>
 </aside>
 
-  <section class="p-4 sm:ml-64 mt-10" id="section">
+
+
+<section class="p-4 sm:ml-64 mt-10" id="section">
     <div class="flex relative   rounded  h-10 mt-[15px] ">
       <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
         <li class="inline-flex items-center">
@@ -206,7 +206,7 @@
                 d="m1 9 4-4-4-4" />
             </svg>
             <span class="cursor-default ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Lista de
-              Empleados</span>
+              Usuarios</span>
           </div>
         </li>
       </ol>
@@ -214,7 +214,7 @@
 
     <div class="encabezado flex justify-between items-center w-[90%] text-[#b9dfff]">
 
-      <h1 class=" text-[28px]">Lista Empleados</h1>
+      <h1 class=" text-[28px]">Lista Usuarios</h1>
 
       <button class="bg-slate-950 text-slate-400 
             border border-slate-400 
@@ -395,21 +395,16 @@
         <thead>
 
           <tr>
-
-            <th>Nombre Completo</th>
-            <th>Cédula de Identidad</th>
-            <th>Puesto de Trabajo</th>
-            <th>Departamento</th>
-            <th>Fecha de Ingreso</th>
-            <th>Estado</th>
-            <th>Teléfono</th>
-         
+            <th>Id</th>
+            <th>Rol</th>
+            <th>Nombre de Usuario</th>
+            
             <th>Acciones</th>
           </tr>
         </thead>
-        <tbody id="empleados-table">
+        <tbody id="empleados-table" class="">
   
-        <?php include '../../Backend/tablas/tabla-empleados.php'
+        <?php include '../../Backend/tablas/tabla-usuarios.php'
         ?>
 
 
@@ -426,14 +421,9 @@
     </div>
   </section>
 
+
   <script src="../../assets/js/tables.js"></script>
   <script src="../../assets/js/empleados.js" id="scripts"></script>
-  <script type="module" src="../../assets/js/flowbite.js" id="scripts"></script>
-
- 
-
-
-
+<script type="module" src="../../assets/js/flowbite.js" id="scripts"></script>
 </body>
-
 </html>
