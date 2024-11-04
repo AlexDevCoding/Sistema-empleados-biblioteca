@@ -2,7 +2,7 @@ document.getElementById('formulario').onsubmit = function(event) {
   event.preventDefault(); 
 
   const formData = new FormData(this);
-  const contraseña = formData.get('Contraseña');
+  const contraseña = formData.get('contraseña');
   const repetirContraseña = formData.get('repetir_Contraseña');
 
   if (contraseña !== repetirContraseña) {
@@ -10,7 +10,7 @@ document.getElementById('formulario').onsubmit = function(event) {
       return;
   }
 
-  fetch('../Backend/registrar.php', {
+  fetch('../../Backend/registrar.php', {
       method: 'POST',
       body: formData
   })

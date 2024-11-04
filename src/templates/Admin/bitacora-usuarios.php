@@ -1,179 +1,145 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../css/output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../../assets/webfont/tabler-icons-outline.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../css/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/webfont/tabler-icons-outline.css">
+  <title>Document</title>
 </head>
+
 <body class="bg-[#060d23]">
-<nav
-    class="fixed top-0 z-50 w-full bg-[#0b1739] dark:bg-gray-800 dark:border-gray-700" id="barra-de-navegacion"
-  >
+  <nav class="fixed top-0 z-50 w-full bg-[#0b1739] dark:bg-gray-800 dark:border-gray-700" id="barra-de-navegacion">
     <div class="px-3 py-3 lg:px-5 lg:pl-3">
       <div class="flex items-center justify-between">
         <div class="flex items-center justify-start rtl:justify-end">
-          <button
-            data-drawer-target="logo-sidebar"
-            data-drawer-toggle="logo-sidebar"
-            aria-controls="logo-sidebar"
+          <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
             type="button"
-            class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          >
+            class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
             <span class="sr-only">Open sidebar</span>
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                fill-rule="evenodd"
-                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
-              ></path>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path clip-rule="evenodd" fill-rule="evenodd"
+                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+              </path>
             </svg>
           </button>
           <a href=" " class="flex ms-2 md:me-24">
-            <img
-              src="../../assets/Img/file.png"
-              class="h-[50px] me-3"
-              alt="Biblioteca Virtual"
-            />
-            <span
-              class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-white"
-              >Biblioteca Virtual</span
-            >
+            <img src="../../assets/Img/file.png" class="h-[50px] me-3" alt="Biblioteca Virtual" />
+            <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-white">Biblioteca
+              Virtual</span>
           </a>
         </div>
-        
+
       </div>
     </div>
   </nav>
 
-  <aside
-  id="logo-sidebar"
-  class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-[#081028] border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
-  aria-label="Sidebar"
->
-  <div class="h-full px-3 pb-4 overflow-y-auto bg-[#081028] leading-8">
-    
-    <ul class="space-y-2 font-medium">
-      <li>
-        <a
-          href="tablero-admin.html"
-          class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
-        >
-        <i class="ti ti-layout-dashboard" style="font-size: 25px;"></i>
-          <span class="ms-3">Tablero</span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="#"
-          class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group" 
-          aria-controls="dropdown-example" data-collapse-toggle="dropdown-example"
-        >
-        <i class="ti ti-users" style="font-size: 25px;"></i>
-          <span class="flex-1 ms-3 whitespace-nowrap">Empleados</span>
-          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-         </svg>
-        
-         
-        </a>
-        <ul id="dropdown-example" class="hidden py-2 space-y-2">
-          <li>
-            <a href="asistencias.php" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
+  <aside id="logo-sidebar"
+    class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-[#081028] border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+    aria-label="Sidebar">
+    <div class="h-full px-3 pb-4 overflow-y-auto bg-[#081028] leading-8">
+
+      <ul class="space-y-2 font-medium">
+        <li>
+          <a href="tablero-admin.html"
+            class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group">
+            <i class="ti ti-layout-dashboard" style="font-size: 25px;"></i>
+            <span class="ms-3">Tablero</span>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
+            aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <i class="ti ti-users" style="font-size: 25px;"></i>
+            <span class="flex-1 ms-3 whitespace-nowrap">Empleados</span>
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 1 4 4 4-4" />
+            </svg>
+
+
+          </a>
+          <ul id="dropdown-example" class="hidden py-2 space-y-2">
+            <li>
+              <a href="asistencias.php" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
             hover:text-white dark:text-white dark:hover:bg-gray-700">Asistencias</a>
-         </li>
-          <li>
-             <a href="lista-empleados.php" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
+            </li>
+            <li>
+              <a href="lista-empleados.php" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
              hover:text-white dark:text-white dark:hover:bg-gray-700">Lista de Empleados</a>
-          </li>
-          <li>
-            <a href="permisos-vacaciones.php" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
+            </li>
+            <li>
+              <a href="permisos-vacaciones.php" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
             hover:text-white dark:text-white dark:hover:bg-gray-700">Permisos Y Vacaciones</a>
-         </li>
-          
-    </ul>
-      </li>
-      
+            </li>
 
-   
-      <li>
-        <a
-          href="estadisticas.html"
-          class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
-        >
-        <i class="ti ti-chart-bar" style="font-size: 25px;"></i>
-          <span class="flex-1 ms-3 whitespace-nowrap">Estadísticas</span>
-        </a>
-      </li>
-
-      <li>
-        <a
-          href="reportes.html"
-          class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
-        >
-        <i class="ti ti-report-search" style="font-size: 25px;"></i>
-          <span class="flex-1 ms-3 whitespace-nowrap">Reportes</span>
-        </a>
-      </li>
-
-      <li>
-        <a
-          href="bitacora-usuarios.php"
-          class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
-        >
-      
-        <i class="ti ti-users-group" style="font-size: 25px;"></i>
-          <span class="flex-1 ms-3 whitespace-nowrap">Bitacora de usuarios</span>
-        </a>
-      </li>
-
-      <li>
-        <a
-          href="bases-datos.html"
-          class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
-        >
-          <i class="ti ti-database" style="font-size: 25px;"></i>
-          <span class="flex-1 ms-3 whitespace-nowrap">Base De Datos</span>
-        </a>
-      </li>
-
-
-      <li>
-        <a
-          href="manual-usuario.html"
-          class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
-        >
-        <i class="ti ti-help-octagon" style="font-size: 25px;"></i>
-          <span class="flex-1 ms-3 whitespace-nowrap">Manual de usuario</span>
-        </a>
-      </li>
+          </ul>
+        </li>
 
 
 
-      <li>
-        <a
-          href="../../Backend/logout.php"
-          class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
-        >
-        <i class="ti ti-logout" style="font-size: 25px;"></i>
-          <span class="flex-1 ms-3 whitespace-nowrap">Cerrar Sección</span>
-        </a>
-      </li>
-      
-    </ul>
-  </div>
-</aside>
+        <li>
+          <a href="estadisticas.html"
+            class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group">
+            <i class="ti ti-chart-bar" style="font-size: 25px;"></i>
+            <span class="flex-1 ms-3 whitespace-nowrap">Estadísticas</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="reportes.html"
+            class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group">
+            <i class="ti ti-report-search" style="font-size: 25px;"></i>
+            <span class="flex-1 ms-3 whitespace-nowrap">Reportes</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="bitacora-usuarios.php"
+            class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group">
+
+            <i class="ti ti-users-group" style="font-size: 25px;"></i>
+            <span class="flex-1 ms-3 whitespace-nowrap">Bitacora de usuarios</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="bases-datos.html"
+            class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group">
+            <i class="ti ti-database" style="font-size: 25px;"></i>
+            <span class="flex-1 ms-3 whitespace-nowrap">Base De Datos</span>
+          </a>
+        </li>
+
+
+        <li>
+          <a href="manual-usuario.html"
+            class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group">
+            <i class="ti ti-help-octagon" style="font-size: 25px;"></i>
+            <span class="flex-1 ms-3 whitespace-nowrap">Manual de usuario</span>
+          </a>
+        </li>
 
 
 
-<section class="p-4 sm:ml-64 mt-10" id="section">
+        <li>
+          <a href="../../Backend/logout.php"
+            class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group">
+            <i class="ti ti-logout" style="font-size: 25px;"></i>
+            <span class="flex-1 ms-3 whitespace-nowrap">Cerrar Sección</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </aside>
+
+
+
+  <section class="p-4 sm:ml-64 mt-10" id="section">
     <div class="flex relative   rounded  h-10 mt-[15px] ">
       <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
         <li class="inline-flex items-center">
@@ -187,17 +153,7 @@
             Tablero
           </a>
         </li>
-        <li>
-          <div class="flex items-center">
-            <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-              fill="none" viewBox="0 0 6 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="m1 9 4-4-4-4" />
-            </svg>
-            <span
-              class="ms-1 text-sm font-medium text-gray-700 cursor-default hover:text-[#1e54ff] md:ms-2 dark:text-gray-400 dark:hover:text-white">Empleados</span>
-          </div>
-        </li>
+
         <li aria-current="page">
           <div class="flex items-center">
             <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -205,8 +161,7 @@
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="m1 9 4-4-4-4" />
             </svg>
-            <span class="cursor-default ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Lista de
-              Usuarios</span>
+            <span class="cursor-default ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Bitacora Usuarios</span>
           </div>
         </li>
       </ol>
@@ -214,7 +169,7 @@
 
     <div class="encabezado flex justify-between items-center w-[90%] text-[#b9dfff]">
 
-      <h1 class=" text-[28px]">Lista Usuarios</h1>
+      <h1 class=" text-[28px]">Lista De Usuarios</h1>
 
       <button class="bg-slate-950 text-slate-400 
             border border-slate-400 
@@ -227,10 +182,8 @@
               shadow-slate-400 absolute -top-[150%] 
               left-0 inline-flex w-80 h-[5px] rounded-md 
               opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
-        Añadir Empleado
+        Añadir Usuario
       </button>
-
-
       <!-- Main modal -->
       <div id="defaultModal" tabindex="-1" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full">
@@ -255,117 +208,81 @@
               </button>
             </div>
             <!-- Modal body -->
-            <form action="../../Backend/añadir-empleado.php" method="POST">
+            <form action="../../Backend/registrar.php" method="post" id="formulario">
               <div class="grid gap-4 mb-4 ">
                 <div>
-                  <label for="name" class="block mb-2 text-sm font-medium text-white">Nombre Completo</label>
-                  <input type="text" name="nombre_completo" id="name" class="bg-[#060d23] border
+                  <label for="name" class="block mb-2 text-sm font-medium text-white">Nombre </label>
+                  <input type="text" name="nombre" id="name" class="bg-[#060d23] border
                          text-white text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full 
                          p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
-                         dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                    placeholder="Ingresar nombre completo" required>
+                         dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingresar nombre"
+                    required>
                 </div>
 
                 <div>
-                  <label for="Identidad" class="block mb-2 text-sm font-medium text-white">Cédula de Identidad</label>
-                  <input type="text" name="cedula_identidad" id="cedula_identidad" class="bg-[#060d23] border  text-white 
-                      text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 
-                      block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 
-                      dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500
-                       dark:focus:border-primary-500" placeholder="Ingresar cédula" pattern="\d{8}"
-                    title="la cédula debe contener 8 digitos" required>
-
-                </div>
-
-                <div>
-                  <label for="name" class="block mb-2 text-sm font-medium text-white">Puesto De Trabajo</label>
-                  <input type="text" name="puesto" id="name" class="bg-[#060d23] border 
-                       text-white text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full 
-                       p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
-                       dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Puesto de Trabajo"
+                  <label for="apellido" class="block mb-2 text-sm font-medium text-white">Apellido </label>
+                  <input type="text" name="apellido" id="apellido" class="bg-[#060d23] border
+                         text-white text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full 
+                         p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
+                         dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingresar Apellido"
                     required>
                 </div>
 
 
+                <div>
+                  <label for="usuario" class="block mb-2 text-sm font-medium text-white">Usuario </label>
+                  <input type="text" name="usuario" id="usuario" class="bg-[#060d23] border
+                         text-white text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full 
+                         p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
+                         dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingresar usuario"
+                    required>
+                </div>
 
+                <div>
+                  <label for="email" class="block mb-2 text-sm font-medium text-white">Correo </label>
+                  <input type="email" name="correo" id="correo" class="bg-[#060d23] border
+                         text-white text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full 
+                         p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
+                         dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingresar correo"
+                    required>
+
+                </div>
+
+                <div>
+                  <label for="contraseña" class="block mb-2 text-sm font-medium text-white">Contraseña </label>
+                  <input type="password" name="contraseña" id="contraseña" class="bg-[#060d23] border
+                         text-white text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full 
+                         p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
+                         dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingresar contraseña"
+                    required>
+
+                </div>
 
 
                 <div>
-                  <label for="category" class="block mb-2 text-sm font-medium text-white ">Departamento</label>
-                  <select id="category"
-                    class="bg-[#060d23] border  text-gray-400 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
-                    " name="departamento">
-                    <option selected="" disabled>Seleccionar Departamento</option>
-                    <option value="Dirección ">Dirección</option>
-                    <option value="Administración">Administración</option>
-                    <option value="Recursos Humanos">Recursos Humanos</option>
-                    <option value="Planificación">Planificación</option>
-                    <option value="Tecnología">Tecnología</option>
-                    <option value="Operaciones">Operaciones</option>
-                    <option value="Proyectos">Proyectos</option>
-                    <option value="Atención y Social">Atención y Social</option>
-         
+                  <label for="contraseña" class="block mb-2 text-sm font-medium text-white">Confirmar Contraseña
+                  </label>
+                  <input type="password" name="repetir_Contraseña" id="repetir_Contraseña" class="bg-[#060d23] border
+                         text-white text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full 
+                         p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
+                         dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Confirmar contraseña"
+                    required>
+
+                </div>
+
+                <div>
+
+                  <label for="contraseña" class="block mb-2 text-sm font-medium text-white">Confirmar Contraseña
+                  </label>
+                  <select name="tipo_usuario" id="tipos"
+                    class="bg-[rgb(6,13,35)]  text-gray-400   text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5    dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option disabled selected class="" >Seleccione tipo de usuario</option>
+                    <option value="Administrador">Administrador</option>
+                    <option value="Empleado">Empleado</option>
+
                   </select>
-                </div>
-
-                <div class="">
-                  <label class="block text-sm font-medium text-white mb-2">Seleccionar rango de fechas</label>
-
-                  <div id="date-range-picker" date-rangepicker class="flex items-center">
-                    <div class="relative w-[100%]">
-                      <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                          <path
-                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                        </svg>
-                      </div>
-                      <input datepicker id="default-datepicker" name="fecha_ingreso" type="text"
-                        class="bg-[#060d23] border  text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Fecha Inicio">
-                    </div>
-
-
-                  </div>
 
                 </div>
-
-                <div>
-                  <label for="estado" class="block mb-2 text-sm font-medium text-white">Estado</label>
-                  <select name="estado" id="estado" class="bg-[#060d23] border text-gray-400 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required>
-                    <option value="Activo">Activo</option>
-                    <option value="Inactivo">Inactivo</option>
-                  </select>
-                </div>
-
-
-                <div>
-                  <label for="Teléfono" class="block mb-2 text-sm font-medium text-white">Teléfono</label>
-                  <input type="tel" name="telefono" id="telefono" class="bg-[#060d23] border text-white 
-                      text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 
-                      block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 
-                      dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500
-                       dark:focus:border-primary-500" placeholder="Ingresar telefono" pattern="\d{10,11}"
-                    title="El teléfono debe contener 10 u 11 dígitos" required required>
-
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
               </div>
               <button type="submit" class="text-white bg-blue-700 
@@ -381,8 +298,39 @@
           </form>
         </div>
       </div>
-    </div>
 
+
+    </div>
+    <div id="modalExito" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+      <div class="bg-white p-4 rounded-lg shadow-lg flex items-center space-x-4 w-96">
+        <div class="w-12 h-12 flex items-center justify-center bg-emerald-500 rounded-full">
+          <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+      </div>
+          <div class="flex-1">
+              <h3 class="text-lg font-semibold text-emerald-600">Éxito</h3>
+              <p class="text-gray-600">Su cuenta ha sido registrada!</p>
+          </div>
+          <button onclick="cerrarModal('modalExito')" class="text-gray-500">X</button>
+      </div>
+    </div>
+    
+ 
+    <div id="modalError" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+      <div class="bg-white p-4 rounded-lg shadow-lg flex items-center space-x-4 w-96">
+          <div class="w-12 h-12 flex items-center justify-center bg-red-500 rounded-full">
+              <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+          </div>
+          <div class="flex-1">
+              <h3 class="text-lg font-semibold text-red-600">Error</h3>
+              <p class="text-gray-600">There was an error processing your request.</p>
+          </div>
+          <button onclick="cerrarModal('modalError')" class="text-gray-500">X</button>
+      </div>
+    </div>
 
 
     <div class="p-[30px]  border-none  rounded-lg  mt-8 w-[90%] bg-[#0b1739]">
@@ -397,15 +345,17 @@
           <tr>
             <th>Id</th>
             <th>Rol</th>
+            <th>Fecha De Registro</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
             <th>Nombre de Usuario</th>
-            
             <th>Acciones</th>
           </tr>
         </thead>
         <tbody id="empleados-table" class="">
-  
-        <?php include '../../Backend/tablas/tabla-usuarios.php'
-        ?>
+
+          <?php include '../../Backend/tablas/tabla-usuarios.php'
+            ?>
 
 
         </tbody>
@@ -424,6 +374,8 @@
 
   <script src="../../assets/js/tables.js"></script>
   <script src="../../assets/js/empleados.js" id="scripts"></script>
-<script type="module" src="../../assets/js/flowbite.js" id="scripts"></script>
+  <script src="../../assets/js/modals.js"></script>
+  <script type="module" src="../../assets/js/flowbite.js" id="scripts"></script>
 </body>
+
 </html>
