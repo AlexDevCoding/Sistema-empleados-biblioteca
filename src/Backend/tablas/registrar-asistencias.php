@@ -9,7 +9,7 @@ if (isset($_POST['cedula']) && isset($_POST['fecha']) && isset($_POST['hora_entr
     $hora_salida = $_POST['hora_salida'];
     $estado = $_POST['estado'];
     
-    $fecha_obj = DateTime::createFromFormat('d/m/Y', $fecha);
+    $fecha_obj = DateTime::createFromFormat('m/d/Y', $fecha);
     if (!$fecha_obj) {
         echo "Formato de fecha inválido. Use DD/MM/YYYY.";
         exit;

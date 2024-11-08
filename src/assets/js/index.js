@@ -1,30 +1,28 @@
-var dom = document.getElementById('chart-container');
-var myChart = echarts.init(dom, 'dark', {
+var dom1 = document.getElementById('chart-container');
+var myChart1 = echarts.init(dom1, 'dark', {
   renderer: 'canvas',
   useDirtyRect: false
 });
 
-
-
-var app = {};
+var dom2 = document.getElementById('main');
+var graficaIngreso = echarts.init(dom2, 'dark', {
+  renderer: 'canvas',
+  useDirtyRect: false
+});
 
 fetch('../../Backend/graficas/index.php')
   .then(response => response.json()) 
   .then(data => {
+    const datos = document.querySelector('#empleados');
+    const datos2 = document.querySelector('#asistencias');
 
-console.log(data);
-const datos = document.querySelector('#empleados');
-const datos2 = document.querySelector('#asistencias');
+    const totalEmpleados = data.totalEmpleados; 
+    const tasaAsistencias = data.tasaAsistencias;
 
-// Asumiendo que `data` es la respuesta JSON obtenida
-const totalEmpleados = data.totalEmpleados; 
-const tasaAsistencias = data.tasaAsistencias;
+    datos.textContent = `${totalEmpleados}`;
+    datos2.textContent = `${tasaAsistencias}%`;
 
-datos.textContent = `${totalEmpleados}`;
-datos2.textContent = `${tasaAsistencias}%`; // Mostrar la tasa de asistencias con el símbolo de porcentaje
-
-    
-    var option = {
+    var option1 = {
       title: {
         text: 'Distribución de Empleados por Departamento',
         top: 'top',
@@ -45,7 +43,7 @@ datos2.textContent = `${tasaAsistencias}%`; // Mostrar la tasa de asistencias co
           fontSize: 12, 
           color: '#ffffff', 
           formatter: function (value) {
-            return value.length > 10 ? value.substring(0, 10) + '...' : value; 
+            return value.length > 10 ? value.substring(0, 10) + '...' : value;
           }
         },
         axisLine: {
@@ -56,7 +54,6 @@ datos2.textContent = `${tasaAsistencias}%`; // Mostrar la tasa de asistencias co
       },
       yAxis: {
         type: 'value',
-    
         axisLabel: {
           fontSize: 12, 
           color: '#ffffff' 
@@ -80,7 +77,6 @@ datos2.textContent = `${tasaAsistencias}%`; // Mostrar la tasa de asistencias co
           },
           itemStyle: {
             emphasis: {
-             
               color: '#7EC3E5'
             },
             borderColor: '#2C3E50', 
@@ -110,12 +106,59 @@ datos2.textContent = `${tasaAsistencias}%`; // Mostrar la tasa de asistencias co
       }
     };
 
-    if (option && typeof option === 'object') {
-      myChart.setOption(option);
+    if (option1 && typeof option1 === 'object') {
+      myChart1.setOption(option1);
     }
 
-    window.addEventListener('resize', myChart.resize);
+    // Nueva gráfica de empleados activos
+    var opcionesEmpleadosActivos = {
+      title: {
+        text: 'Empleados Activos',
+        left: 'center',
+        textStyle: {
+          color: '#8fc8ff',
+          fontSize: 20,
+          fontWeight: 'bold'
+        },
+        padding: [15, 0, 0, 0]
+      },
+      tooltip: {
+        trigger: 'item',
+        formatter: '{b}: {c} empleados'
+      },
+      series: [{
+        type: 'pie',
+        radius: '50%',
+        data: [
+          { value: data.empleadosActivos, name: 'Activos' },
+          { value: totalEmpleados - data.empleadosActivos, name: 'Inactivos' }
+        ],
+        label: {
+          color: '#ffffff',
+          fontSize: 14
+        },
+        color: ['#5e56fe', '#9da8ff'],
+        itemStyle: {
+          emphasis: {
+            color: '#c2cbff'
+          }
+        }
+      }],
+      grid: {
+        left: '10%', 
+        right: '10%',
+        bottom: '15%',
+        top: '20%'
+      }
+    };
+
+    graficaIngreso.setOption(opcionesEmpleadosActivos);
+
+    window.addEventListener('resize', () => {
+      myChart1.resize();
+      graficaIngreso.resize(); 
+    });
   })
   .catch(error => {
     console.error('Error al obtener los datos:', error); 
-  }); 
+  });

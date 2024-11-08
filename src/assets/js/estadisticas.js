@@ -1,31 +1,22 @@
-
-
-var dom = document.getElementById('chart-container');
-var myChart = echarts.init(dom, 'dark', {
+// Contenedor para la gráfica de distribución de empleados por departamento
+var dom1 = document.getElementById('chart-container');
+var myChart1 = echarts.init(dom1, 'dark', {
   renderer: 'canvas',
   useDirtyRect: false
 });
 
-
-
-var app = {};
+// Contenedor para la nueva gráfica de empleados activos
+var dom2 = document.getElementById('main');
+var graficaIngreso = echarts.init(dom2, 'dark', {
+  renderer: 'canvas',
+  useDirtyRect: false
+});
 
 fetch('../../Backend/graficas/index.php')
   .then(response => response.json()) 
   .then(data => {
-
-
-
-
-    const pieData = data.departamentos.map((nombre, index) => ({
-      value: data.totales[index],
-      name: nombre
-      
-    }));
-    
- 
-    
-    var option = {
+    // Datos para la gráfica de Distribución de Empleados por Departamento
+    var option1 = {
       title: {
         text: 'Distribución de Empleados por Departamento',
         top: 'top',
@@ -57,7 +48,6 @@ fetch('../../Backend/graficas/index.php')
       },
       yAxis: {
         type: 'value',
-    
         axisLabel: {
           fontSize: 12, 
           color: '#ffffff' 
@@ -70,6 +60,7 @@ fetch('../../Backend/graficas/index.php')
       },
       series: [
         {
+          name: 'Empleados por Departamento',
           data: data.totales,
           type: 'bar',
           color: '#4A90E2',
@@ -81,7 +72,6 @@ fetch('../../Backend/graficas/index.php')
           },
           itemStyle: {
             emphasis: {
-             
               color: '#7EC3E5'
             },
             borderColor: '#2C3E50', 
@@ -111,12 +101,54 @@ fetch('../../Backend/graficas/index.php')
       }
     };
 
-    if (option && typeof option === 'object') {
-      myChart.setOption(option);
-    }
+    myChart1.setOption(option1);
 
-    window.addEventListener('resize', myChart.resize);
+    // Nueva gráfica de Empleados Activos
+    const totalEmpleados = data.totales.reduce((a, b) => a + b, 0); // Calcula el total de empleados sumando los totales
+
+    var opcionesEmpleadosActivos = {
+      title: {
+        text: 'Empleados Activos',
+        left: 'center',
+        textStyle: {
+          color: '#8fc8ff',
+          fontSize: 20,
+          fontWeight: 'bold'
+        },
+        padding: [15, 0, 0, 0]
+      },
+      tooltip: {
+        trigger: 'item',
+        formatter: '{b}: {c} empleados'
+      },
+      series: [{
+        type: 'pie',
+        radius: '50%',
+        data: [
+          { value: data.empleadosActivos, name: 'Activos' },
+          { value: totalEmpleados - data.empleadosActivos, name: 'Inactivos' }
+        ],
+        label: {
+          color: '#ffffff',
+          fontSize: 14
+        },
+        color: ['#5e56fe', '#9da8ff'],
+        itemStyle: {
+          emphasis: {
+            color: '#c2cbff'
+          }
+        }
+      }]
+    };
+
+    graficaIngreso.setOption(opcionesEmpleadosActivos);
+
+    // Ajustar ambas gráficas cuando la ventana cambie de tamaño
+    window.addEventListener('resize', () => {
+      myChart1.resize();
+      graficaIngreso.resize(); 
+    });
   })
   .catch(error => {
     console.error('Error al obtener los datos:', error); 
-  }); 
+  });

@@ -272,7 +272,7 @@
 
                 <div>
 
-                  <label for="contraseña" class="block mb-2 text-sm font-medium text-white">Confirmar Contraseña
+                  <label for="contraseña" class="block mb-2 text-sm font-medium text-white">Tipo de Usuario
                   </label>
                   <select name="tipo_usuario" id="tipos"
                     class="bg-[rgb(6,13,35)]  text-gray-400   text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5    dark:focus:ring-blue-500 dark:focus:border-blue-500">
