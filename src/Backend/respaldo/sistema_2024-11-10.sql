@@ -329,8 +329,9 @@ CREATE TABLE `usuarios` (
   `rol` enum('Administrador','Empleado') NOT NULL,
   `fecha` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `usuarios` VALUES ('1', 'fernando', 'herrera', 'josue547', 'henriquezjosue384@gmail.com', '$2y$10$dOOgrpHr298x5rs6Fq1bw.GLkUvUaY/C8wDwcYiIgzurESDNrqSKe', 'Administrador', '2024-11-04');
+INSERT INTO `usuarios` VALUES ('2', 'josue', 'González', 'josue123', 'henriquezjosue384@gmail.com', '$2y$10$G0sYUdBOUjvF6Xqif3IiHO/D.ma7h/CzyzRZY0OWtLkUfQRq4v5dO', 'Empleado', '2024-11-10');
 
 

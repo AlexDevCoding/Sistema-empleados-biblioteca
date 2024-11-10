@@ -24,9 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
           
             if ($rol == 'Administrador') {
-                $redirect_url = '../templates/admin/tablero-admin.html';
+                $redirect_url = '../templates/admin/tablero-admin.php';
             } elseif ($rol == 'Empleado') {
-                $redirect_url = '../templates/empleado/tablero-empleados.html'; 
+                $redirect_url = '../templates/empleado/tablero-empleados.php'; 
             }
 
             echo json_encode(['status' => 'success', 'rol' => $rol, 'redirect_url' => $redirect_url]);

@@ -1,3 +1,10 @@
+
+<?php
+
+  include('../../Backend/auth/autenticación.php')
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,6 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../../css/output.css" rel="stylesheet" />
   <link rel="stylesheet" href="../../assets/webfont/tabler-icons-outline.css">
+  <link rel="icon" href="../../assets/Img/file.png">
   <title>Document</title>
 </head>
 
@@ -43,7 +51,7 @@
 
       <ul class="space-y-2 font-medium">
         <li>
-          <a href="tablero-admin.html"
+          <a href="tablero-admin.php"
             class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group">
             <i class="ti ti-layout-dashboard" style="font-size: 25px;"></i>
             <span class="ms-3">Tablero</span>
@@ -82,7 +90,7 @@
 
 
         <li>
-          <a href="estadisticas.html"
+          <a href="estadisticas.php"
             class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group">
             <i class="ti ti-chart-bar" style="font-size: 25px;"></i>
             <span class="flex-1 ms-3 whitespace-nowrap">Estadísticas</span>
@@ -90,7 +98,7 @@
         </li>
 
         <li>
-          <a href="reportes.html"
+          <a href="reportes.php"
             class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group">
             <i class="ti ti-report-search" style="font-size: 25px;"></i>
             <span class="flex-1 ms-3 whitespace-nowrap">Reportes</span>
@@ -107,7 +115,7 @@
         </li>
 
         <li>
-          <a href="bases-datos.html"
+          <a href="bases-datos.php"
             class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group">
             <i class="ti ti-database" style="font-size: 25px;"></i>
             <span class="flex-1 ms-3 whitespace-nowrap">Base De Datos</span>
@@ -116,7 +124,7 @@
 
 
         <li>
-          <a href="manual-usuario.html"
+          <a href="manual-usuario.php"
             class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group">
             <i class="ti ti-help-octagon" style="font-size: 25px;"></i>
             <span class="flex-1 ms-3 whitespace-nowrap">Manual de usuario</span>

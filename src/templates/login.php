@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+
+if (isset($_SESSION['usuario'])) {
+    if ($_SESSION['rol'] === 'Administrador') {
+        header("Location: Admin/tablero-admin.php");
+    } elseif ($_SESSION['rol'] === 'Empleado') {
+        header("Location: Empleado/tablero-empleados.php");
+    }
+    exit();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
   <head>

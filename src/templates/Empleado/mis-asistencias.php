@@ -1,3 +1,10 @@
+<?php
+
+  include('../../Backend/auth/autenticación.php')
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -64,7 +71,7 @@ aria-label="Sidebar"
   <ul class="space-y-2 font-medium">
     <li>
       <a
-        href="tablero-empleados.html"
+        href="tablero-empleados.php"
         class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
       >
         <i class="ti ti-users" style="font-size: 25px;"></i>
@@ -74,7 +81,7 @@ aria-label="Sidebar"
     </li>
     <li>
       <a
-        href="mis-asistencias.html"
+        href="mis-asistencias.php"
         class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group" 
         
       >
