@@ -2,6 +2,8 @@
 include('../../conexión.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $response = array();
+    
     $id = $_GET['id'];
     $nombre = $_POST['nombre_completo'];
     $cedula = $_POST['cedula_identidad'];
@@ -18,12 +20,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param('sssssssi', $nombre, $cedula, $puesto, $departamento, $fecha_ingreso, $estado, $telefono, $id);
 
     if ($stmt->execute()) {
-        echo "Empleado actualizado correctamente";
+        $response['success'] = true;
+        $response['message'] = "Empleado actualizado correctamente";
     } else {
-        echo "Error: " . $conn->error;
+        $response['success'] = false;
+        $response['message'] = "Error: " . $conn->error;
     }
 
     $stmt->close();
     $conn->close();
+    
+    header('Content-Type: application/json');
+    echo json_encode($response);
 }
 ?>

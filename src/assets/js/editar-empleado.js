@@ -22,9 +22,58 @@ function cargarDatosEmpleado(button) {
     const form = document.querySelector("#updateProductModal form");
     form.action = `../../Backend/tablas/actions/actualizar-empleado.php?id=${id}`;
 
-    // Cambia el texto del botón submit - Corregido el selector
+    // Cambia el texto del botón submit
     const submitButton = document.querySelector("#updateProductModal button[type='submit']");
     if (submitButton) {
         submitButton.textContent = "Actualizar Empleado";
     }
 }
+
+// Agregar manejador para el formulario
+document.querySelector("#updateProductModal form").addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    try {
+        const formData = new FormData(this);
+        const response = await fetch(this.action, {
+            method: 'POST',
+            body: formData
+        });
+        
+        if (response.ok) {
+            // Ocultar el modal de edición
+            document.querySelector("#updateProductModal").classList.add('hidden');
+            
+            // Mostrar el modal de confirmación
+            document.querySelector("#confirmar-editar").classList.remove('hidden');
+            
+            // Actualizar el texto del modal
+            document.querySelector("#confirmar-editar h3").textContent = 
+                "¡El empleado ha sido actualizado exitosamente!";
+            
+            // Cambiar el texto y color del botón
+            const confirmBtn = document.querySelector("#confirmar-editar #btnConfirmarEliminar");
+            confirmBtn.textContent = "Aceptar";
+            confirmBtn.classList.remove('bg-red-600', 'hover:bg-red-800');
+            confirmBtn.classList.add('bg-green-600', 'hover:bg-green-800');
+            
+            // Recargar la página después de cerrar el modal
+            confirmBtn.addEventListener('click', () => {
+                location.reload();
+            });
+        } else {
+            throw new Error('Error al actualizar el empleado');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Hubo un error al actualizar el empleado');
+    }
+});
+
+// Agregar manejadores para cerrar el modal de confirmación
+document.querySelectorAll('[data-modal-hide="popup-modal"]').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelector("#confirmar-editar").classList.add('hidden');
+        location.reload();
+    });
+});
