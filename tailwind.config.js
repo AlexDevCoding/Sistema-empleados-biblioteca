@@ -1,9 +1,10 @@
 // tailwind.config.js
 module.exports = {
   content: [
-    "./src/**/*.{html,js}",
+    "./src/**/*.{html,js,php,jsx,ts}",
     "./node_modules/flowbite/**/*.js",
   ],
+  
   theme: {
     extend: {},
   },
