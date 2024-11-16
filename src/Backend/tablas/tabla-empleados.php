@@ -17,7 +17,23 @@
                     echo '<td>' . htmlspecialchars($row['telefono']) . '</td>';
                     echo '<td class="celda">';
          
-                    echo '<button onclick="editarEmpleado(' . htmlspecialchars($row['id']) . ')" class="boton" id="updateProductButton" data-modal-target="updateProductModal" data-modal-toggle="updateProductModal"><i class="ti ti-pencil "></i></button>';
+                    echo '<button 
+                    onclick="cargarDatosEmpleado(this)" 
+                    class="boton" 
+                    type="button"
+                    data-modal-target="updateProductModal" 
+                    data-modal-toggle="updateProductModal" 
+                    data-id="' . htmlspecialchars($row['id']) . '" 
+                    data-nombre="' . htmlspecialchars($row['nombre_completo']) . '" 
+                    data-cedula="' . htmlspecialchars($row['cedula_identidad']) . '" 
+                    data-puesto="' . htmlspecialchars($row['puesto']) . '" 
+                    data-departamento="' . htmlspecialchars($row['departamento']) . '" 
+                    data-fecha="' . htmlspecialchars($row['fecha_ingreso']) . '" 
+                    data-estado="' . htmlspecialchars($row['estado']) . '" 
+                    data-telefono="' . htmlspecialchars($row['telefono']) . '">
+                    <i class="ti ti-pencil"></i>
+                </button>';
+
                     echo '<button onclick="eliminarEmpleado(' . htmlspecialchars($row['id']) . ')" class="eliminar" data-modal-target="popup-modal" data-modal-toggle="popup-modal"><i class="ti ti-trash"></i></button>';
 
                     echo '</td>';
@@ -122,7 +138,7 @@
                     class="bg-[#060d23] border  text-gray-400 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
                     " name="departamento">
                     <option selected="" disabled>Seleccionar Departamento</option>
-                    <option value="Dirección ">Dirección</option>
+                    <option value="Dirección">Dirección</option>
                     <option value="Administración">Administración</option>
                     <option value="Recursos Humanos">Recursos Humanos</option>
                     <option value="Planificación">Planificación</option>
@@ -209,3 +225,4 @@
       </div>
 
       <script src="../../assets/js/eliminar-empleado.js"></script>
+      <script src="../../assets/js/editar-empleado.js"></script>
