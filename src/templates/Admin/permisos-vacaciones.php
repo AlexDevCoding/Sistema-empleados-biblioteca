@@ -218,18 +218,19 @@
 
             <h1 class=" text-[28px]">Lista de Permisos y Vacaciones</h1>
           
-            <button  class="bg-slate-950 text-slate-400 hidden
+            <button class="bg-slate-950 text-slate-400 
             border border-slate-400 
             font-medium overflow-hidden relative 
             px-4 py-2 rounded-md hover:brightness-150 
              hover:border-b a
-            ctive:opacity-75 outline-none duration-300 group" id="defaultModalButton" data-modal-target="defaultModal" data-modal-toggle="defaultModal" >
-              <span class="bg-slate-400 
+            ctive:opacity-75 outline-none duration-300 group" id="defaultModalButton" data-modal-target="defaultModal"
+        data-modal-toggle="defaultModal">
+        <span class="bg-slate-400 
               shadow-slate-400 absolute -top-[150%] 
               left-0 inline-flex w-80 h-[5px] rounded-md 
-              opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)] "></span>
-             Añadir Permiso
-            </button>
+              opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+        Añadir Permiso
+      </button>
 
 
 <!-- Main modal -->
@@ -248,19 +249,24 @@
                 </button>
             </div>
             <!-- Modal body -->
-            <form action="../../Backend/tablas/Permisos-Vacaciones.php">
+            <form action="../../Backend/tablas/registrar-permiso.php" method="post">
                 <div class="grid gap-4 mb-4 ">
-                    <div>
-                        <label for="name" class="block mb-2 text-sm font-medium text-white">Empleado</label>
-                        <input type="text" name="name" id="name" class="bg-[#060d23] border border-gray-300 text-white text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingresar nombre" required="">
-                    </div>
+                <div>
+                  <label for="cedula" class="block mb-2 text-sm font-medium text-white">Cédula de Identidad</label>
+                  <input type="text" name="cedula" id="cedula" class="bg-[#060d23] border text-gray-400 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Ingresar Cédula" required>
+                </div>
+
+                <div>
+                  <label for="nombre" class="block mb-2 text-sm font-medium text-white">Nombre Completo</label>
+                  <input type="text" name="nombre" id="nombre_completo" class="bg-[#060d23] border text-gray-400 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Ingresar Nombre Completo">
+                </div>
                  
                 
                     <div>
                         <label for="category" class="block mb-2 text-sm font-medium text-white ">Tipo de Permiso</label>
-                        <select id="category" class="bg-[#060d23] border border-gray-300 text-gray-400 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                        <select id="category" name="tipo_permiso" class="bg-[#060d23] border border-gray-300 text-gray-400 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             <option selected="">Seleccionar Categoria</option>
-                            <option value="Vacaciones">Vacaciones</option>
+                            <option value="Vacaciones" name="Vacaciones">Vacaciones</option>
                             <option value="Permiso medico">Permiso medico</option>
                             <option value="Permiso Personal">Permiso Personal</option>
                          
@@ -301,12 +307,12 @@
                  
                         
                       </div>
-                      <button type="button" 
+                      <button 
                       class="text-white bg-blue-700 
                       hover:bg-[#235dff] focus:ring-4 
                       focus:ring-blue-300 font-medium rounded-lg 
                       text-sm px-5 py-2.5 me-2 mb-2  
-                       " type="submit">Añadir Solicitud</button>
+                      " type="submit">Añadir Solicitud</button>
 
 
 
@@ -344,7 +350,7 @@
     <tbody id="empleados-table">
         
         <?php
-          include '../../Backend/tablas/Permisos-Vacaciones.php'
+          include '../../Backend/tablas/obtener-permisos.php'
         ?>
           
        
@@ -362,9 +368,10 @@
 
 
   </section>
-
+  <script src="../../assets/js/buscador.js"></script>
   <script src="../../assets/js/tables.js"></script>
   <script src="../../assets/js/empleados.js" id="scripts"></script>
   <script type="module" src="../../assets/js/flowbite.js" id="scripts"></script>
+
 </body>
 </html>
