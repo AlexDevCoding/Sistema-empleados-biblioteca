@@ -224,6 +224,7 @@
         </div>
       </div>
 
+
       <div id="confirmar-editar" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed inset-0 z-50 flex justify-center items-center w-full h-full bg-black bg-opacity-50">
     <div class="relative p-4 bg-[#0b1739] rounded-lg shadow-lg w-full max-w-md mx-auto">
         <button type="button" class="absolute left-[90%] text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 flex justify-center items-center" data-modal-hide="popup-modal">
@@ -249,11 +250,9 @@
     </div>
 </div>
 
-   
 
 
 
+      
       <script src="../../assets/js/eliminar-empleado.js"></script>
       <script src="../../assets/js/editar-empleado.js"></script>
-      
-     

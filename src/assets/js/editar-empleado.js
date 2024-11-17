@@ -73,7 +73,7 @@ document.querySelector("#updateProductModal form").addEventListener('submit', as
 // Agregar manejadores para cerrar el modal de confirmación
 document.querySelectorAll('[data-modal-hide="popup-modal"]').forEach(button => {
     button.addEventListener('click', () => {
-        document.querySelector("#confirmar-editar").classList.add('hidden');
+        document.querySelector("#confirmar-editarr").classList.add('hidden');
         location.reload();
     });
 });
