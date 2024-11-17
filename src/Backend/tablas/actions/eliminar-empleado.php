@@ -14,6 +14,19 @@ if (isset($_POST['id'])) {
     $conn->begin_transaction();
     
     try {
+        // Eliminar permisos relacionados
+        $sql_permisos = "DELETE FROM permisos WHERE empleado_id = ?";
+        $stmt_permisos = $conn->prepare($sql_permisos);
+        
+        if (!$stmt_permisos) {
+            throw new Exception('Error en la preparación de eliminación de permisos: ' . $conn->error);
+        }
+        
+        $stmt_permisos->bind_param("i", $id);
+        $stmt_permisos->execute();
+        $stmt_permisos->close();
+        
+        // Eliminar asistencias relacionadas
         $sql_asistencias = "DELETE FROM asistencias WHERE empleado_id = ?";
         $stmt_asistencias = $conn->prepare($sql_asistencias);
         
@@ -25,6 +38,7 @@ if (isset($_POST['id'])) {
         $stmt_asistencias->execute();
         $stmt_asistencias->close();
         
+        // Eliminar empleado
         $sql_empleado = "DELETE FROM empleados WHERE id = ?";
         $stmt_empleado = $conn->prepare($sql_empleado);
         
