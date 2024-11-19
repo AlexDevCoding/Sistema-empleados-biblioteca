@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Permisos y Vacaciones</title>
     <link href="../../css/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../assets/webfont/tabler-icons-outline.css">
     <link rel="icon" href="../../assets/Img/file.png">
