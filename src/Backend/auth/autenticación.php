@@ -22,7 +22,7 @@ $paginas_admin = [
 
 $paginas_empleado = [
     'manual-usuario.php',
-    'mis-asistencias.php',
+    'asistencias.php',
     'permisos-vacaciones.php',
     'solicitudes-permisos.php',
     'tablero-empleados.php'

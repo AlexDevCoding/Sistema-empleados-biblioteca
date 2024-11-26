@@ -73,7 +73,7 @@ if (isset($_SESSION['usuario'])) {
           Iniciar Sección
         </button>
         
-     <span class="mt-2 text-[#888]">¿No tienes una cuenta? <a href="registro.html" class="font-[500] text-white hover:text-[#60a5fa]">Registrate</a></span>
+    
 
       </fieldset>
     </form>

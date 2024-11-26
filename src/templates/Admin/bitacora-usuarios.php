@@ -14,7 +14,7 @@
   <link href="../../css/output.css" rel="stylesheet" />
   <link rel="stylesheet" href="../../assets/webfont/tabler-icons-outline.css">
   <link rel="icon" href="../../assets/Img/file.png">
-  <title>Document</title>
+  <title>Bitacora de Usuarios</title>
 </head>
 
 <body class="bg-[#060d23]">

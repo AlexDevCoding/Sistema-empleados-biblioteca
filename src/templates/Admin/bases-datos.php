@@ -13,7 +13,7 @@
     <link href="../../css/output.css" rel="stylesheet" />
     <link rel="icon" href="../../assets/Img/file.png">
     <link rel="stylesheet" href="../../assets/webfont/tabler-icons-outline.css">
-    <title>Document</title>
+    <title>Base de datos</title>
 </head>
 <body class="bg-[#060d23]">
 <nav

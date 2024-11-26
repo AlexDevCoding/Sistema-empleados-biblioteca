@@ -81,7 +81,7 @@ aria-label="Sidebar"
     </li>
     <li>
       <a
-        href="mis-asistencias.php"
+        href="asistencias.php.php"
         class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group" 
         
       >
@@ -120,15 +120,7 @@ aria-label="Sidebar"
   </ul>
     </li>
 
-    <li>
-      <a
-        href="#"
-        class="flex items-center p-2 text-[rgb(0,170,255)] rounded-lg dark:text-white hover:bg-[rgb(37,92,255)] hover:text-white dark:hover:bg-gray-700 group"
-      >
-      <i class="ti ti-help-octagon" style="font-size: 25px;"></i>
-        <span class="flex-1 ms-3 whitespace-nowrap">Manual de usuario</span>
-      </a>
-    </li>
+
 
 
 
@@ -354,12 +346,13 @@ aria-label="Sidebar"
             <th>Hora de entrada</th>
             <th>Hora de salida</th>
             <th>Estado</th>
-           
+            <th>Acciones</th>
            
         </tr>
     </thead>
     <tbody>
-      
+    <?php include '../../Backend/tablas/obtener-asistencias.php'
+        ?>
     </tbody>
 </table>
 
@@ -375,9 +368,9 @@ aria-label="Sidebar"
 
 
 
-    <script src="../../assets/js/tables.js"></script>
-    <script src="../../assets/js/empleados.js" id="scripts"></script>
-    <script src="../../assets/js/buscador.js"></script>
-    <script type="module" src="../../assets/js/flowbite.js" id="scripts"></script>
+<script src="../../assets/js/tables.js"></script>
+  <script src="../../assets/js/empleados.js" id="scripts"></script>
+  <script type="module" src="../../assets/js/flowbite.js" id="scripts"></script>
+  <script src="../../assets/js/buscador.js"></script>
 </body>
 </html>
