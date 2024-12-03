@@ -177,7 +177,7 @@
 
     <div class="encabezado flex justify-between items-center w-[90%] text-[#b9dfff]">
 
-      <h1 class=" text-[28px]">Lista De Usuarios</h1>
+      <h1 class=" text-[28px]">Bitacora de Usuarios</h1>
 
       <button class="bg-slate-950 text-slate-400 
             border border-slate-400 

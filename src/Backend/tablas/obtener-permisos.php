@@ -22,8 +22,8 @@ if (mysqli_num_rows($result) > 0) {
         echo "<tr>";
         echo "<td class='px-4 py-2'>" . htmlspecialchars($row["nombre_completo"]) . "</td>";
         echo "<td class='px-4 py-2'>" . htmlspecialchars($row["tipo_permiso"]) . "</td>";
-        echo "<td class='px-4 py-2'>" . date('Y-m-d', strtotime($row["fecha_inicio"])) . "</td>";
-        echo "<td class='px-4 py-2'>" . date('Y-m-d', strtotime($row["fecha_fin"])) . "</td>";
+        echo "<td class='px-4 py-2'>" . date('m/d/Y', strtotime($row["fecha_inicio"])) . "</td>";
+        echo "<td class='px-4 py-2'>" . date('m/d/Y', strtotime($row["fecha_fin"])) . "</td>";
         echo "<td class='px-4 py-2'>" . htmlspecialchars($row["estado"]) . "</td>";
         echo '<td class="celda">';
         
@@ -37,8 +37,8 @@ if (mysqli_num_rows($result) > 0) {
                 data-id="' . htmlspecialchars($row['id']) . '" 
                 data-nombre="' . htmlspecialchars($row['nombre_completo']) . '" 
                 data-tipo="' . htmlspecialchars($row['tipo_permiso']) . '" 
-                data-fecha-inicio="' . date('Y-m-d', strtotime($row["fecha_inicio"])) . '" 
-                data-fecha-fin="' . date('Y-m-d', strtotime($row["fecha_fin"])) . '" 
+                data-fecha-inicio="' . date('m/d/Y', strtotime($row["fecha_inicio"])) . '" 
+                data-fecha-fin="' . date('m/d/Y', strtotime($row["fecha_fin"])) . '" 
                 data-estado="' . htmlspecialchars($row['estado']) . '">
                 <i class="ti ti-pencil"></i>
               </button>';
@@ -109,6 +109,29 @@ mysqli_close($conn);
                             <option value="Permiso personal">Permiso personal</option>
                         </select>
                     </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-white mb-2">Rango de fechas</label>
+                        <div id="date-range-picker" date-rangepicker class="flex items-center " style="gap: 10px;"  >
+                    <div class="relative w-[50%]">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                        </svg>
+                    </div>
+                    <input datepicker datepicker-autohide datepicker-format="mm/dd/yyyy" name="start" type="text" class="bg-[#060d23] border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Fecha Inicio">
+                    </div>
+                    <span class="text-gray-500">A</span>
+                    <div class="relative w-[50%]">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                        </svg>
+                    </div>
+                    <input datepicker datepicker-autohide datepicker-format="mm/dd/yyyy" name="end" type="text" class="bg-[#060d23] border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Fecha Final">
+                </div>
+                </div>
+                    </div>
 
                     <div>
                         <label for="estado" class="block mb-2 text-sm font-medium text-white">Estado del Permiso</label>
@@ -119,17 +142,7 @@ mysqli_close($conn);
                         </select>
                     </div>
 
-                    <div>
-                        <label class="block text-sm font-medium text-white mb-2">Rango de fechas</label>
-                        <div class="flex items-center gap-4">
-                            <div class="w-1/2">
-                                <input type="date" name="start" class="bg-[#060d23] border border-gray-300 text-white text-sm rounded-lg block w-full p-2.5">
-                            </div>
-                            <div class="w-1/2">
-                                <input type="date" name="end" class="bg-[#060d23] border border-gray-300 text-white text-sm rounded-lg block w-full p-2.5">
-                            </div>
-                        </div>
-                    </div>
+              
                 </div>
                 <button type="submit" class="text-white bg-blue-700 hover:bg-[#235dff] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
                     Actualizar Permiso
