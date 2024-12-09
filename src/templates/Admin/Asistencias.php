@@ -261,7 +261,7 @@ include('../../Backend/auth/autenticación.php')
                         </svg>
                       </div>
                       <input datepicker  datepicker-autohide datepicker-autoselect-today datepicker-buttons name="fecha" 
-                      datepicker-format="dd/mm/yyyy" type="text"
+                      datepicker-format="yyyy/mm/dd" type="text"
                         class="bg-[#060d23] border  text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Fecha">
                     </div>
@@ -398,6 +398,33 @@ include('../../Backend/auth/autenticación.php')
 
 
     </div>
+
+
+    <div id="añadir-asistencia" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed inset-0 z-50 flex justify-center items-center w-full h-full bg-black bg-opacity-50">
+    <div class="relative p-4 bg-[#0b1739] rounded-lg shadow-lg w-full max-w-md mx-auto">
+        <button type="button" class="absolute left-[90%] text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 flex justify-center items-center" data-modal-hide="popup-modal">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+            </svg>
+            <span class="sr-only">Close modal</span>
+        </button>
+        <div class="text-center">
+            <div class="flex justify-center items-center mb-4">
+                <svg class="text-green-400 w-12 h-12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
+                </svg>
+            </div>
+            <h3 class="mb-5 text-lg font-normal text-gray-500">¡La asistencia ha sido registrada exitosamente!</h3>
+            <div class="flex justify-center gap-4">
+                <button data-modal-hide="popup-modal" id="btnConfirmarEditar" type="button" class="text-white bg-green-600 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5">
+                    Aceptar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
   </section>
 
 
@@ -405,6 +432,7 @@ include('../../Backend/auth/autenticación.php')
   <script src="../../assets/js/tables.js"></script>
 
   <script src="../../assets/js/empleados.js" id="scripts"></script>
+  <script src="../../assets/js/añadir-asistencias.js" id="scripts"></script>
   <script type="module" src="../../assets/js/flowbite.js" id="scripts"></script>
   <script src="../../assets/js/buscador.js"></script>
 </body>

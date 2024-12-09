@@ -54,8 +54,5 @@ function eliminarAsistencia(id) {
             alert('Error al eliminar la asistencia: ' + data.message);
         }
     })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Error al procesar la solicitud');
-    });
+    
 }

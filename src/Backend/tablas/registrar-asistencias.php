@@ -1,5 +1,6 @@
 <?php
 include('../../Backend/conexión.php');
+header('Content-Type: application/json');
 
 if (isset($_POST['cedula']) && isset($_POST['fecha']) && isset($_POST['hora_entrada']) && isset($_POST['hora_salida']) && isset($_POST['estado'])) {
     
@@ -9,13 +10,6 @@ if (isset($_POST['cedula']) && isset($_POST['fecha']) && isset($_POST['hora_entr
     $hora_salida = $_POST['hora_salida'];
     $estado = $_POST['estado'];
     
-    $fecha_obj = DateTime::createFromFormat('m/d/Y', $fecha);
-    if (!$fecha_obj) {
-        echo "Formato de fecha inválido. Use DD/MM/YYYY.";
-        exit;
-    }
-    $fecha_convertida = $fecha_obj->format('Y-m-d');
- 
     $queryEmpleado = "SELECT id FROM empleados WHERE cedula_identidad = ?";
     $stmtEmpleado = $conn->prepare($queryEmpleado);
     $stmtEmpleado->bind_param("s", $cedula);
@@ -28,19 +22,19 @@ if (isset($_POST['cedula']) && isset($_POST['fecha']) && isset($_POST['hora_entr
 
         $queryAsistencia = "INSERT INTO asistencias (empleado_id, fecha, hora_entrada, hora_salida, estado) VALUES (?, ?, ?, ?, ?)";
         $stmtAsistencia = $conn->prepare($queryAsistencia);
-        $stmtAsistencia->bind_param("issss", $empleado_id, $fecha_convertida, $hora_entrada, $hora_salida, $estado);
+        $stmtAsistencia->bind_param("issss", $empleado_id, $fecha, $hora_entrada, $hora_salida, $estado);
         
         if ($stmtAsistencia->execute()) {
-            echo "Asistencia registrada correctamente";
+            echo json_encode(['success' => true, 'message' => 'Asistencia registrada correctamente']);
         } else {
-            echo "Error al registrar la asistencia";
+            echo json_encode(['success' => false, 'message' => 'Error al registrar la asistencia']);
         }
 
     } else {
-        echo "Empleado no encontrado con la cédula proporcionada";
+        echo json_encode(['success' => false, 'message' => 'Empleado no encontrado con la cédula proporcionada']);
     }
 
 } else {
-    echo "Todos los campos son obligatorios";
+    echo json_encode(['success' => false, 'message' => 'Todos los campos son obligatorios']);
 }
 ?>

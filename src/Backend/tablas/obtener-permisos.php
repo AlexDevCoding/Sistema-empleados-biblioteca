@@ -178,4 +178,4 @@ mysqli_close($conn);
 
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 <script src="../../assets/js/eliminar-permiso.js"></script>
-<script src="../../assets//js/editar-permiso.js"></script>
+<script src="../../assets/js/editar-permiso.js"></script>

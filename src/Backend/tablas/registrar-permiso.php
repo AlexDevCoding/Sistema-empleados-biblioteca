@@ -1,6 +1,8 @@
 <?php
 include('../../Backend/conexión.php');
 
+header('Content-Type: application/json');
+
 if (isset($_POST['cedula']) && isset($_POST['tipo_permiso']) && isset($_POST['start']) && isset($_POST['end'])) {
     
     $cedula = $_POST['cedula'];
@@ -13,7 +15,7 @@ if (isset($_POST['cedula']) && isset($_POST['tipo_permiso']) && isset($_POST['st
     $fecha_fin_obj = DateTime::createFromFormat('m/d/Y', $fecha_fin);
     
     if (!$fecha_inicio_obj || !$fecha_fin_obj) {
-        echo "Formato de fecha inválido. Use MM/DD/YYYY.";
+        echo json_encode(['success' => false, 'message' => 'Formato de fecha inválido. Use MM/DD/YYYY.']);
         exit;
     }
     
@@ -37,16 +39,16 @@ if (isset($_POST['cedula']) && isset($_POST['tipo_permiso']) && isset($_POST['st
         $stmtPermiso->bind_param("isss", $empleado_id, $tipo_permiso, $fecha_inicio_convertida, $fecha_fin_convertida);
         
         if ($stmtPermiso->execute()) {
-            echo "Permiso registrado correctamente";
+            echo json_encode(['success' => true, 'message' => 'Permiso registrado correctamente']);
         } else {
-            echo "Error al registrar el permiso";
+            echo json_encode(['success' => false, 'message' => 'Error al registrar el permiso']);
         }
 
     } else {
-        echo "Empleado no encontrado con la cédula proporcionada";
+        echo json_encode(['success' => false, 'message' => 'Empleado no encontrado con la cédula proporcionada']);
     }
 
 } else {
-    echo "Todos los campos son obligatorios";
+    echo json_encode(['success' => false, 'message' => 'Todos los campos son obligatorios']);
 }
 ?>
