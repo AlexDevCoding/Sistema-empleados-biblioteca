@@ -6,7 +6,11 @@ function eliminarPermiso(id) {
 
     modal.classList.remove('hidden');
 
-    btnConfirmar.onclick = async function () {
+    // Crear el manejador del evento
+    const confirmarHandler = async function () {
+        // Remover el event listener inmediatamente
+        btnConfirmar.removeEventListener('click', confirmarHandler);
+        
         try {
             const response = await fetch('../../Backend/tablas/actions/eliminar-permiso.php', {
                 method: 'POST',
@@ -30,6 +34,9 @@ function eliminarPermiso(id) {
             modal.classList.add('hidden');
         }
     };
+
+    // Usar addEventListener en lugar de onclick
+    btnConfirmar.addEventListener('click', confirmarHandler);
 
     btnCancelar.onclick = function () {
         modal.classList.add('hidden');

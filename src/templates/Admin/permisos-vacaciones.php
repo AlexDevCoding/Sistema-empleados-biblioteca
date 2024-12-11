@@ -391,12 +391,12 @@
 </div>
   </section>
   
-  <script type="module" src="../../assets/js/flowbite.js" id="scripts"></script>
+
   <script src="../../assets/js/añadir-permiso.js"></script>
   <script src="../../assets/js/buscador.js"></script>
   <script src="../../assets/js/tables.js"></script>
   <script src="../../assets/js/empleados.js" id="scripts"></script>
-
+  <script type="module" src="../../assets/js/flowbite.js" id="scripts"></script>
  
 
 </body>

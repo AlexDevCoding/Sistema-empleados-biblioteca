@@ -242,7 +242,7 @@
           </div>
           
 
-          <p class="font-bold">8</p>
+          <p class="font-bold" id="permisos">cargando..</p>
              
           <p class="hidden min-[1000px]:block"> Pendientes de aprobación</p>   
 

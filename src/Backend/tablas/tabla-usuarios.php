@@ -39,7 +39,7 @@ if (mysqli_num_rows($result) > 0) {
                 data-rol="' . htmlspecialchars($row['rol']) . '">
                 <i class="ti ti-pencil"></i>
               </button>';
-                    echo '<button onclick="eliminarUsuario(' . htmlspecialchars($row['id']) . ')" class="eliminar" data-modal-target="popup-modal" data-modal-toggle="popup-modal"><i class="ti ti-trash"></i></button>';
+                    echo '<button onclick="mostrarModalEliminar(' . htmlspecialchars($row['id']) . ')" class="eliminar" data-modal-target="popup-modal" data-modal-toggle="popup-modal"><i class="ti ti-trash"></i></button>';
                     echo '</td>';
                     echo '</tr>';
     }
@@ -194,3 +194,4 @@ mysqli_close($conn);
 </div>
 
 <script src="../../assets/js/editar-usuario.js"></script>
+<script src="../../assets/js/eliminar-usuario.js"></script>

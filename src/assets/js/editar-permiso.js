@@ -4,15 +4,17 @@ function cargarDatosPermiso(button) {
     const nombre = button.getAttribute("data-nombre");
     const tipo = button.getAttribute("data-tipo");
     const estado = button.getAttribute("data-estado");
-    const fechaStart = button.getAttribute("data-fecha-inicio");
-    const fechaEnd = button.getAttribute("data-fecha-fin");
+    
+    // Formatear las fechas al formato yyyy/mm/dd
+    const fechaInicio = formatearFecha(button.getAttribute("data-fecha-inicio"));
+    const fechaFin = formatearFecha(button.getAttribute("data-fecha-fin"));
     
     // Rellena los campos del modal
     document.querySelector("#updateProductModal input[name='nombre']").value = nombre;
     document.querySelector("#updateProductModal select[name='tipo_permiso']").value = tipo;
     document.querySelector("#updateProductModal select[name='estado']").value = estado;
-    document.querySelector("#updateProductModal input[name='start']").value = fechaStart;
-    document.querySelector("#updateProductModal input[name='end']").value = fechaEnd;
+    document.querySelector("#updateProductModal input[name='start']").value = fechaInicio;
+    document.querySelector("#updateProductModal input[name='end']").value = fechaFin;
 
     // Configura el formulario
     const form = document.querySelector("#updateProductModal form");
@@ -27,6 +29,16 @@ function cargarDatosPermiso(button) {
         form.appendChild(idInput);
     }
     idInput.value = id;
+}
+
+// Función auxiliar para formatear fechas
+function formatearFecha(fecha) {
+    if (!fecha) return '';
+    const partes = fecha.split('/');
+    if (partes.length === 3) {
+        return `${partes[0]}/${partes[1].padStart(2, '0')}/${partes[2].padStart(2, '0')}`;
+    }
+    return fecha;
 }
 
 // Agregar manejador para el formulario

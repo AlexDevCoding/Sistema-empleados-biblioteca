@@ -133,9 +133,63 @@ function generarTablaAsistencias(doc, data, startY) {
 }
 
 function generarTablaPermisos(doc, data, startY) {
-    const headers = ['Empleado', 'Tipo', 'Inicio', 'Fin', 'Estado'];
-    const columnWidths = [70, 50, 45, 45, 37];
-    generarTablaGenerica(doc, data, headers, columnWidths, startY);
+    const headers = ['Empleado', 'Tipo Permiso', 'Fecha Inicio', 'Fecha Fin', 'Estado'];
+    const columnWidths = [70, 45, 45, 45, 42];
+    
+    let y = startY;
+    let currentX = 15;
+
+    // Encabezado con fondo gris
+    doc.setFillColor(240, 240, 240);
+    doc.rect(10, y - 7, 277, 10, 'F');
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(60, 60, 60);
+    doc.setFontSize(10);
+
+    // Dibujar encabezados
+    headers.forEach((header, index) => {
+        doc.text(header.toUpperCase(), currentX, y);
+        currentX += columnWidths[index];
+    });
+
+    // Configurar estilo para datos
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(0, 0, 0);
+    y += 10;
+
+    // Dibujar filas de datos
+    data.forEach((row, rowIndex) => {
+        // Nueva página si es necesario
+        if (y > 180) {
+            doc.addPage();
+            y = 30;
+        }
+
+        // Alternar colores de fondo para las filas
+        if (rowIndex % 2 === 0) {
+            doc.setFillColor(249, 249, 249);
+            doc.rect(10, y - 7, 277, 10, 'F');
+        }
+
+        currentX = 15;
+        const valores = [
+            row.nombre_completo,
+            row.tipo_permiso,
+            row.fecha_inicio,
+            row.fecha_fin,
+            row.estado
+        ];
+
+        valores.forEach((valor, index) => {
+            let texto = String(valor);
+            if (texto.length > 25) {
+                texto = texto.substring(0, 22) + '...';
+            }
+            doc.text(texto, currentX, y);
+            currentX += columnWidths[index];
+        });
+        y += 10;
+    });
 }
 
 function generarTablaGenerica(doc, data, headers, columnWidths, startY) {

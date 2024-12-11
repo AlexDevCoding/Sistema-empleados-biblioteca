@@ -4,7 +4,6 @@
   include('../../Backend/auth/autenticación.php')
 
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -13,7 +12,7 @@
     <link href="../../css/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../assets/webfont/tabler-icons-outline.css">
     <link rel="icon" href="../../assets/Img/file.png">
-    <title>Tablero empleados - Sistema de gestión de empleado</title>
+    <title>Document</title>
   </head>
   <body class="bg-[#060d23]">
     <nav
@@ -97,7 +96,7 @@
             <a href="asistencias.php" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
             hover:text-white dark:text-white dark:hover:bg-gray-700">Asistencias</a>
          </li>
-      
+        
           <li>
             <a href="permisos-vacaciones.php" class="flex items-center w-full p-2 text-[rgb(0,170,255)] transition duration-75 rounded-lg pl-11 group hover:bg-[rgb(37,92,255)] 
             hover:text-white dark:text-white dark:hover:bg-gray-700">Permisos Y Vacaciones</a>
@@ -158,80 +157,33 @@
   </div>
 </aside>
 
-    <section class="p-4 sm:ml-64" id="section">
-      <div
-        class="p-4  mt-14"
-      >
-        <div class="grid grid-cols-3 gap-4 mb-4">
-          <div
-            class="flex flex-start justify-start flex-col p-[10px] h-24 rounded bg-[#0b1739] text-[#8fc8ff] font-medium"
-          >
-            <div class="w-[100%] flex items-center justify-between">
-               <p class="">Total de empleados</p>
-               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-          
-              </div>
-              <p class="font-bold" id="empleados">cargando..</p>
-               
-               
-
-
-
-
-
-
-
-
-          </div>
-          <div
-          class="flex flex-start justify-start flex-col p-[10px] h-24 rounded bg-[#0b1739] text-[#8fc8ff] font-medium "
-        >
-          <div class="w-[100%] flex items-center justify-between ">
-             <p class="">Tasa de Asistencias</p>
-             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+    <section class="p-4 sm:ml-64 mt-10" id="section">
+      <div class="flex relative   rounded  h-10 mt-[15px] ">
+        <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+          <li class="inline-flex items-center">
+            <a href="#"
+              class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-[#1e54ff] dark:text-gray-400 dark:hover:text-white">
+              <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 20 20">
+                <path
+                  d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
               </svg>
-
-            
+              Tablero
+            </a>
+          </li>
+    
+          <li aria-current="page">
+            <div class="flex items-center">
+              <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 9 4-4-4-4" />
+              </svg>
+              <span class="cursor-default ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Base de Datos</span>
             </div>
-            
-
-            <p class="font-bold" id="asistencias">cargando..</p>
-               
-            <p class="hidden min-[1000px]:block"> Promedio Semanal</p>   
-
-
-
-
-
-
-        </div>
-        <div
-        class="flex flex-start justify-start flex-col p-[10px] h-24 rounded bg-[#0b1739] text-[#8fc8ff] font-medium "
-      >
-        <div class="w-[100%] flex items-center justify-between ">
-           <p class="">Solicitudes de Vacaciones</p>
-           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-
-          
-          </div>
-          
-
-          <p class="font-bold" id="permisos">cargando..</p>
-             
-          <p class="hidden min-[1000px]:block"> Pendientes de aprobación</p>   
-
-
-
-
-
-
+          </li>
+        </ol>
       </div>
-        </div>
      
         <div class="grid grid-cols-2 gap-4 mb-4">
           <div
@@ -241,23 +193,23 @@
             
           </p>
         </div>
-          <div
-            class="flex items-center justify-center rounded bg-[#0b1739] h-[500px] dark:bg-gray-800 p-[10px]" id="main"
-          >
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-              
-            </p>
-          </div>
+        <div
+        class="flex items-center justify-center rounded bg-[#0b1739] h-[500px] dark:bg-gray-800 p-[10px]" id="main"
+      >
+        <p class="text-2xl text-gray-400 dark:text-gray-500">
+          
+        </p>
+      </div>
         
           
         
         </div>
-        </div>
+     
 
 
     </section>
     <script src="../../assets/js/graficas.js"></script>
-    <script src="../../assets/js/index.js"></script>
+    <script src="../../assets/js/estadisticas.js"></script>
     <script type="module" src="../../assets/js/flowbite.js" id="scripts"></script>
  
 

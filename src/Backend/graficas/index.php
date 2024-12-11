@@ -25,6 +25,11 @@ $totalAsistenciasQuery = "SELECT COUNT(*) as total FROM asistencias";
 $totalAsistenciasResult = ejecutarConsulta($conn, $totalAsistenciasQuery);
 $totalAsistencias = mysqli_fetch_assoc($totalAsistenciasResult)['total'];
 
+// Consulta de total de permisos
+$totalPermisosQuery = "SELECT COUNT(*) as total FROM permisos";
+$totalPermisosResult = ejecutarConsulta($conn, $totalPermisosQuery);
+$totalPermisos = mysqli_fetch_assoc($totalPermisosResult)['total'];
+
 // Calcular la tasa de asistencias
 $tasaAsistencias = ($totalEmpleados > 0) ? ($totalAsistencias / $totalEmpleados) * 100 : 0;
 
@@ -49,6 +54,8 @@ echo json_encode([
     'totalEmpleados' => $totalEmpleados,
     'totalAsistencias' => $totalAsistencias,
     'tasaAsistencias' => round($tasaAsistencias, 2),
-    'empleadosActivos' => $empleadosActivos
+    'empleadosActivos' => $empleadosActivos,
+    'totalPermisos' => $totalPermisos
 ]);
 ?>
+

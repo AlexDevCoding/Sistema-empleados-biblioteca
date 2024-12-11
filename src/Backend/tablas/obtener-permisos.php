@@ -22,8 +22,8 @@ if (mysqli_num_rows($result) > 0) {
         echo "<tr>";
         echo "<td class='px-4 py-2'>" . htmlspecialchars($row["nombre_completo"]) . "</td>";
         echo "<td class='px-4 py-2'>" . htmlspecialchars($row["tipo_permiso"]) . "</td>";
-        echo "<td class='px-4 py-2'>" . date('m/d/Y', strtotime($row["fecha_inicio"])) . "</td>";
-        echo "<td class='px-4 py-2'>" . date('m/d/Y', strtotime($row["fecha_fin"])) . "</td>";
+        echo "<td class='px-4 py-2'>" . date('Y/m/d', strtotime($row["fecha_inicio"])) . "</td>";
+        echo "<td class='px-4 py-2'>" . date('Y/m/d', strtotime($row["fecha_fin"])) . "</td>";
         echo "<td class='px-4 py-2'>" . htmlspecialchars($row["estado"]) . "</td>";
         echo '<td class="celda">';
         
@@ -178,4 +178,4 @@ mysqli_close($conn);
 
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 <script src="../../assets/js/eliminar-permiso.js"></script>
-<script src="../../assets/js/editar-permiso.js"></script>
+<script src="../../assets//js/editar-permiso.js"></script>

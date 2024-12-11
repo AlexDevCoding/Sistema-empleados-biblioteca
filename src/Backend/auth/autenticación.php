@@ -24,8 +24,9 @@ $paginas_empleado = [
     'manual-usuario.php',
     'asistencias.php',
     'permisos-vacaciones.php',
-    'solicitudes-permisos.php',
-    'tablero-empleados.php'
+    'tablero-empleados.php',
+    'estadisticas.php',
+    'reportes.php'
 ];
 
 $current_page = basename($_SERVER['REQUEST_URI']);

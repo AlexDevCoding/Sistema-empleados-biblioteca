@@ -31,25 +31,25 @@ try {
                    WHERE fecha_ingreso BETWEEN ? AND ?";
             break;
             
-            case "asistencias":
-                $sql = "SELECT e.nombre_completo, DATE_FORMAT(a.fecha, '%Y-%m-%d') as fecha, 
-                        TIME_FORMAT(a.hora_entrada, '%H:%i') as hora_entrada, 
-                        TIME_FORMAT(a.hora_salida, '%H:%i') as hora_salida, 
-                        a.estado 
-                        FROM asistencias a
-                        JOIN empleados e ON a.empleado_id = e.id 
-                        WHERE a.fecha BETWEEN ? AND ?";
-                break;
+        case "asistencias":
+            $sql = "SELECT e.nombre_completo, DATE_FORMAT(a.fecha, '%Y-%m-%d') as fecha, 
+                    TIME_FORMAT(a.hora_entrada, '%H:%i') as hora_entrada, 
+                    TIME_FORMAT(a.hora_salida, '%H:%i') as hora_salida, 
+                    a.estado 
+                    FROM asistencias a
+                    JOIN empleados e ON a.empleado_id = e.id 
+                    WHERE a.fecha BETWEEN ? AND ?";
+            break;
                         
-            case "permisos":
-                $sql = "SELECT e.nombre_completo, p.tipo_permiso, 
-                        DATE_FORMAT(p.fecha_inicio, '%Y-%m-%d') as fecha_inicio, 
-                        DATE_FORMAT(p.fecha_fin, '%Y-%m-%d') as fecha_fin, 
-                        p.estado 
-                        FROM permisos p
-                        JOIN empleados e ON p.id_empleado = e.id 
-                        WHERE p.fecha_inicio BETWEEN ? AND ?";
-                break;
+        case "permisos":
+            $sql = "SELECT e.nombre_completo, p.tipo_permiso, 
+                    DATE_FORMAT(p.fecha_inicio, '%Y-%m-%d') as fecha_inicio, 
+                    DATE_FORMAT(p.fecha_fin, '%Y-%m-%d') as fecha_fin, 
+                    p.estado 
+                    FROM permisos p
+                    JOIN empleados e ON p.empleado_id = e.id 
+                    WHERE p.fecha_inicio BETWEEN ? AND ?";
+            break;
             
         default:
             throw new Exception("Tipo de reporte no válido");

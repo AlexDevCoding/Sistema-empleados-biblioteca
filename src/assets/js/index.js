@@ -15,13 +15,18 @@ fetch('../../Backend/graficas/index.php')
   .then(data => {
     const datos = document.querySelector('#empleados');
     const datos2 = document.querySelector('#asistencias');
-
+    const datos3 = document.querySelector('#permisos');
     const totalEmpleados = data.totalEmpleados; 
     const tasaAsistencias = data.tasaAsistencias;
+    const totalPermisos = data.totalPermisos;
+
+
+ 
 
     datos.textContent = `${totalEmpleados}`;
     datos2.textContent = `${tasaAsistencias}%`;
-
+    datos3.textContent = `${totalPermisos}`;
+    
     var option1 = {
       title: {
         text: 'Distribución de Empleados por Departamento',
