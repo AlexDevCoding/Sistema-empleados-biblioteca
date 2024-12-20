@@ -1,0 +1,7 @@
+    Administrador
+usuario: josue547
+contraseña: 12345
+
+    Empleado
+usuario: fernando384
+contraseña: 12345

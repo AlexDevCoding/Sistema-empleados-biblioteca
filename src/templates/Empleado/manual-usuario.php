@@ -307,6 +307,10 @@ include('../../Backend/auth/autenticación.php')
             // Crear la ventana de impresión con el contenido modificado
             const ventanaImpresion = window.open('', '', 'height=600,width=800');
             ventanaImpresion.document.write('<html><head><title>Imprimir Manual de Usuario</title>');
+            ventanaImpresion.document.write('<style>');
+            ventanaImpresion.document.write('@page { size: portrait; }');
+            ventanaImpresion.document.write('img { max-width: 100%; height: auto; display: block; margin: 0 auto; }');
+            ventanaImpresion.document.write('</style>');
             ventanaImpresion.document.write('</head><body>');
             ventanaImpresion.document.write(seccion.innerHTML);
             ventanaImpresion.document.write('</body></html>');
@@ -315,5 +319,7 @@ include('../../Backend/auth/autenticación.php')
         }
     </script>
 </body>
+
+</html>
 
 </html>

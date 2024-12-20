@@ -199,7 +199,7 @@
   Para comenzar, debe iniciar sesión utilizando el usuario y la clave previamente              registrados. Una vez introducidos los datos, podrás acceder al sistema de gestión.
   </p>
  
-  <img src="../../assets/Img/ingreso.png" alt="" class="border-solid border-4 rounded-lg mt-4">
+  <img src="../../assets/Img/ingreso.png" alt="" class="border-solid border-4 rounded-lg mt-4 ">
 
 
   <h2 class="text-white text-left text-xl  font-bold mt-2">TABLERO – INICIO</h2>
@@ -207,7 +207,7 @@
   El Tablero de inicio incluye un menú lateral con funciones como tablero principal, gestión de empleados, estadísticas, reportes, bitácora de usuarios, base de datos, manual de usuario y cerrar sesión. En el panel principal se muestran datos clave como el total de empleados, la tasa de asistencia y las solicitudes de vacaciones pendientes, junto con gráficos de empleados por departamento y su estado (activos o inactivos).
   </p>
 
-  <img src="../../assets/Img/tablero.png" alt="" class="border-solid border-4 rounded-lg mt-4">
+  <img src="../../assets/Img/tablero.png" alt="" class="border-solid border-4 rounded-lg mt-4 ">
 
   <h2 class="text-white text-left text-xl  font-bold mt-2">REGISTRO – EMPLEADO</h2>
   <p class="text-white text-sm mt-2 text-justify ">
@@ -226,7 +226,7 @@
     <li class="text-white"><strong>Estado:</strong> Seleccione el estado del empleado (activo o inactivo).</li>
   </ul>
   
-  <img src="../../assets/Img/registro-empleado.png" alt="" class="border-solid border-4 rounded-lg mt-4">
+  <img src="../../assets/Img/registro-empleado.png" alt="" class="border-solid border-4 rounded-lg mt-4 ">
 
 
   <h2 class="text-white text-left text-xl  font-bold mt-2">LISTA – EMPLEADOS</h2>
@@ -236,7 +236,7 @@
 
 
   
-  <img src="../../assets/Img/lista-empleados.png" alt="" class="border-solid border-4 rounded-lg mt-4">
+  <img src="../../assets/Img/lista-empleados.png" alt="" class="border-solid border-4 rounded-lg mt-4 ">
 
 
   <h2 class="text-white text-left text-xl  font-bold mt-2">REGISTRO – ASISTENCIA</h2>
@@ -255,14 +255,14 @@
 
 
   
-  <img src="../../assets/Img/Registro-asistencias.png" alt="" class="border-solid border-4 rounded-lg mt-4">
+  <img src="../../assets/Img/Registro-asistencias.png" alt="" class="border-solid border-4 rounded-lg mt-4 ">
 
   <h2 class="text-white text-left text-xl  font-bold mt-2">LISTA – ASISTENCIA</h2>
   <p class="text-white text-sm mt-2 text-justify">
   En la sección de Lista de Asistencias del sistema, se pueden consultar y gestionar los registros de asistencia de los empleados registrados, presentando una tabla detallada que incluye información como el nombre del empleado, la fecha de asistencia, la hora de entrada, la hora de salida y el estado de puntualidad (A tiempo o Retraso), además de contar con una columna de "Acciones" que permite editar o eliminar fácilmente la información de un registro. En la parte superior derecha se encuentra el botón "Añadir Asistencia", que permite registrar manualmente la asistencia de un empleado, asegurando un control eficiente y organizado de las asistencias del personal.
   </p>
 
-  <img src="../../assets/Img/Lista-ASISTENCIAS.png" alt="" class="border-solid border-4 rounded-lg mt-4">
+  <img src="../../assets/Img/Lista-ASISTENCIAS.png" alt="" class="border-solid border-4 rounded-lg mt-4 ">
 
 
   <h2 class="text-white text-left text-xl  font-bold mt-2">REGISTRO – PERMISOS Y VACACIONES</h2>
@@ -279,7 +279,7 @@
    
   </ul>
 
-  <img src="../../assets/Img/REGISTRO – PERMISOS Y VACACIONES.png" alt="" class="border-solid border-4 rounded-lg mt-4">
+  <img src="../../assets/Img/REGISTRO – PERMISOS Y VACACIONES.png" alt="" class="border-solid border-4 rounded-lg mt-4 ">
 
 
 
@@ -288,7 +288,7 @@
   En la sección de Lista de Asistencias del sistema, se pueden consultar y gestionar los registros de asistencia de los empleados registrados, presentando una tabla detallada que incluye información como el nombre del empleado, la fecha de asistencia, la hora de entrada, la hora de salida y el estado de puntualidad (A tiempo o Retraso), además de contar con una columna de "Acciones" que permite editar o eliminar fácilmente la información de un registro. En la parte superior derecha se encuentra el botón "Añadir Asistencia", que permite registrar manualmente la asistencia de un empleado, asegurando un control eficiente y organizado de las asistencias del personal.
   </p>
 
-  <img src="../../assets/Img/LISTA – PERMISOS Y VACACIONES.png" alt="" class="border-solid border-4 rounded-lg mt-4">
+  <img src="../../assets/Img/LISTA – PERMISOS Y VACACIONES.png" alt="" class="border-solid border-4 rounded-lg mt-4 ">
 
 
 
@@ -305,7 +305,7 @@
    
   </ul>
 
-  <img src="../../assets/Img/reportes.png" alt="" class="border-solid border-4 rounded-lg mt-4">
+  <img src="../../assets/Img/reportes.png" alt="" class="border-solid border-4 rounded-lg mt-4 ">
 
 
   <h2 class="text-white text-left text-xl  font-bold mt-2">RESPALDO DE LA BASE DE DATOS</h2>
@@ -317,7 +317,7 @@ Al presionar 'Descargar Base de datos', se generará la copia de seguridad.
 
 
 
-  <img src="../../assets/Img/respaldo.png" alt="" class="border-solid border-4 rounded-lg mt-4">
+  <img src="../../assets/Img/respaldo.png" alt="" class="border-solid border-4 rounded-lg mt-4 ">
 
   <h2 class="text-white text-left text-xl  font-bold mt-2">BITÁCORA DE USUARIOS</h2>
   <p class="text-white text-sm mt-2 text-justify">
@@ -327,7 +327,7 @@ Al presionar 'Descargar Base de datos', se generará la copia de seguridad.
 
 
 
-  <img src="../../assets/Img/respaldo.png" alt="" class="border-solid border-4 rounded-lg mt-4">
+  <img src="../../assets/Img/bitacora.png" alt="" class="border-solid border-4 rounded-lg mt-4 ">
 
 
 
@@ -347,6 +347,13 @@ function imprimirSeccion() {
     if (botonImprimir) {
         botonImprimir.remove();
     }
+
+    // Ajustar el tamaño de las imágenes
+    const imagenes = seccion.querySelectorAll('img');
+    imagenes.forEach(img => {
+        img.style.width = '100%'; // Ajusta el tamaño al 50% del original
+        img.style.height = 'auto'; // Mantiene la proporción de aspecto
+    });
 
     // Crear la ventana de impresión con el contenido modificado
     const ventanaImpresion = window.open('', '', 'height=600,width=800');
